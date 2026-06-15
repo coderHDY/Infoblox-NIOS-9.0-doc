@@ -1,0 +1,21 @@
+---
+title: "Defining Substitute Domain Name (Based on Client IP address) Rules"
+source: "/space/nios90/1321109156"
+pageId: "1321109156"
+---
+You can define a substitute domain name rule for a client IP address if you want to substitute the actual response to a query from the DNS client with an alternate domain name or IP address. When the IP address of the client querying a DNS server matches the RPZ rule, the actual response is substituted with the alternative domain name or IP address specified in the RPZ rule.  
+To define substitute domain name rule for client IP addresses:
+
+1. From the **Data** **Management** tab, select the **DNS** tab -> **Response** **Policy** **Zones** tab, select *DNS_View* -> *Zone,* and then click **Add** -> select **Substitute** **(Domain** **Name)** **Rule** -> **Substitute** **Domain** **Name** **(Client** **IP** **Address)** **Rule**.  
+   or  
+   From the **Data** **Management** tab, select the **DNS** tab -> **Response** **Policy** **Zones** tab, and then select a zone. Expand the Toolbar, click **Add** -> select **Substitute** **(Domain** **Name)** **Rule** -> **Substitute** **Domain** **Name** **(Client** **IP** **Address)** **Rule**.
+2. The following fields are displayed in the *Add* *a* *Substitute* *Domain* *Name* *(Client* *IP* *Address)* *Rule* wizard:
+   
+   - **Client** **IP** **address** **or** **Network:** Enter the client IP address or client network for which you want to define a substitute domain name (client IP address) rule. Click **Select** **Zone** to select a different zone.
+   - **DNS** **View:** Displays the DNS view to which the selected RPZ belongs.
+   - **Policy**: Displays the selected policy.
+   - **Substituted** **Name:** Enter an alternative domain name or IP address that replaces the actual DNS response. Click **Select** **Zone** to select a different zone.
+   - **Comment**: Optionally, enter additional information.
+   - **Disable**: Clear the checkbox to enable the substitute rule. Select the checkbox to disable it.
+3. Click **Next** to define extensible attributes.
+4. Save the configuration.

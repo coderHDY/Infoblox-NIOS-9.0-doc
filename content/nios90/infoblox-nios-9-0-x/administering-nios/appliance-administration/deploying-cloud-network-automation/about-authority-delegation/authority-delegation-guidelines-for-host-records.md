@@ -1,0 +1,13 @@
+---
+title: "Authority delegation guidelines for Host Records"
+source: "/space/nios90/1348501600"
+pageId: "1348501600"
+---
+Consider the following authority delegation guidelines mentioned in the table below when you create, modify, or delete a host record. See [*Sample Cloud API Requests*](/nios90/infoblox-nios-9-0-x/administering-nios/appliance-administration/deploying-cloud-network-automation/about-cloud-api-requests) for a sample cloud API request.
+
+* Authority Delegation for Host Records*
+
+| **Cloud API Requests** | **Standard API and WAPI Requests** | **Comments** |
+| --- | --- | --- |
+| - Authority delegation for a host record is inherited from both the DNS and DHCP portions of the record. For DNS, you can delegate authority for all DNS zones for which the host record is defined. For DHCP, you can delegate authority for the parent network view, network container, network, or DHCP range defined for the host record. - You can create, modify, or delete a host record or a host IP address whose authority is delegated to a Cloud Platform Appliance through Grid Manager. Note that when you create a host record, you must enable it for DNS within the delegated network view. Otherwise, you will not be able to save the host record. - The Cloud Platform Appliance can process a cloud API request that includes a host record only if it has gained authority for both DNS and DHCP portions of the host record, as follows:      - All IP addresses enabled for DHCP within one or more delegation scopes are delegated to the same Cloud Platform Appliance.   - All DNS records defined for one or more DNS zones have the same Cloud Platform Appliance assigned as the Grid primary. | - IP addresses defined in the host record that is enabled DHCP follow the same rules for a fixed address. See the *IPv4 and IPv6 Fixed Addresses* section for more information. - Names or aliases defined in the host record follow the same rules set for resource records. See the *DNS Resource Records* section for more information. | - When you create a host record through a cloud API request, you must include the following extensible attributes in the request: Tenant ID, Cloud API Owned, and CMP Type. |
+| - IP addresses defined in the host record that is enabled for DHCP follow the same rules set for a fixed address. - Names or aliases defined in the host record follow the same rules set for resource records. See [*DNS Resource Records*](/nios90/infoblox-nios-9-0-x/administering-nios/dns/configuring-dns-services/dns-record-scavenging) for more information. - Although no DHCP service restart is required, you can perform a DHCP service restart on a Cloud Platform Appliance through a cloud API request. |  |  |

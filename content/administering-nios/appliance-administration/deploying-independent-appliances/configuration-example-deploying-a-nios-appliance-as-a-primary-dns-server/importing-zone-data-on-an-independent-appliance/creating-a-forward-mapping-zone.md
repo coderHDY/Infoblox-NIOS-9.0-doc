@@ -1,0 +1,21 @@
+---
+title: "Creating a Forward-Mapping Zone"
+source: "/space/nios90/1432754278"
+pageId: "1432754278"
+---
+> **note**
+>
+> **Note: **To import zone data, you must first create a zone and save it.
+
+1. To create an authoritative zone, from the **Data** **Management** tab, select the **DNS** tab -> **Zones** tab, and then click the Add icon -> **Authoritative** **Zone**.
+2. In the *Add* *Authoritative* *Zone* wizard, select **Add** **an** **authoritative** **forward-mapping** **zone.**
+3. Click **Next** and complete the following:
+   
+   - **Name:** Enter [**corpxyz.com**](http://corpxyz.com).
+   - **Comment:** Enter **DNS** **zone**.
+4. Click **Next** to assign a name server group to the zone.
+5. Click the **Zones** tab, select the [**corpxyz.com**](http://corpxyz.com) checkbox, and then click the Edit icon.
+6. In the *Authoritative* *Zone* editor, select the **Name** **Servers** tab, and then complete the following:
+   
+   - **Use** **this** **name** **server** **group**: Select this, and then select **corpxyz** from the drop-down list.
+7. Save the configuration and click **Restart** if it appears at the top of the screen.

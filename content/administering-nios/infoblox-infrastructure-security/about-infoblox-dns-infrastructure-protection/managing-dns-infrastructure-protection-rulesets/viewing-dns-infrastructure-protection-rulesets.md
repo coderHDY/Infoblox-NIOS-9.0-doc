@@ -1,0 +1,44 @@
+---
+title: "Viewing DNS Infrastructure Protection Rulesets"
+source: "/space/nios90/280668850"
+pageId: "280668850"
+---
+Grid Manager displays all the rulesets that have been automatically or manually uploaded to the Grid Master. You can drill down to each ruleset to review individual rules in each rule category. To view the current DNS Infrastructure Protection rulesets and rules:
+
+1. **Infoblox Grid**: From the **Data** **Management** tab, select the **Security** tab -> **DNS Infrastructure Protection** **Rules** tab.   
+   **Member**: From the **Data** **Management** tab, select the **Security** tab -> **Members** tab -> *member* link.   
+   **Profile**: From the **Data** **Management** tab, select the **Security** tab -> **Profiles** tab -> *profiles* link.
+2. In the **DNS Infrastructure** **Protection** **Rules** or the **Members** tab or the **Profiles** tab, Grid Manager displays current rulesets that are stored in the system. It displays the following information for each ruleset:
+
+> **warning**
+>
+> ### Note
+> 
+> If the member is associated with a profile, the rules become read-only and you cannot edit them when you drill down the ruleset from the **Members** tab. However, you can still edit the rules if you drill down the ruleset from the **Profiles** tab even though Grid members are associated with the selected profile.
+
+- **Version**: Displays the ruleset version in YYYYMMDD-x format, where YYYY is the year, MM the month, DD the date, and x the rule engine version number. You can click a version link to view rule categories and individual rules in each category for that specific ruleset.
+- **Active On**: Displays the Grid or the name of the Grid member on which the ruleset is currently running. This can be **Grid**, a Grid member name, or **None**. When this displays **None**, the ruleset is not being used.
+- **Do Not Delete**: Indicates whether this ruleset can be deleted or not during a ruleset update.
+- **Added On**: Displays the timestamp when the ruleset was uploaded to the Grid Master in this format: YYYY-MM-DD HH:MM:SS, plus time zone.
+- **Add Type**: Indicates whether the ruleset was uploaded automatically or manually.
+- **Comment**: Additional information about this ruleset.
+
+You can also do the following when you left click the Action icon :
+
+- Mark a ruleset as do not delete.
+- Activate, open, or edit a specific ruleset.
+- Click **Reset** **to** **defaults** to globally reset all the rule definitions to their default settings in the selected ruleset. When you reset the ruleset to defaults, all member rulesets will be reset as well. In the *Ruleset* *Reset* dialog, you can also select **Delete** **all** **custom** **rules** **in** **selected** **ruleset** to remove all the custom rules in the ruleset. You can reset to defaults at the rule category and rule levels.
+
+To view rules in a specific ruleset version, click the **Version** link and Grid Manager displays the DNS Infrastructure Protection rules by categories. You can also select the checkbox of a ruleset and click the Open icon to view the rules in the ruleset.  
+You can also do the following in this panel:
+
+- Manually upload a ruleset by clicking the Add icon. For more information, see [*Manually Uploading Rulesets*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408834).
+- Modify some of the data in the table. Double click a row, and you can modify the **Do** **Not** **Delete** and **Comment** columns. Click **Save** to save the changes. Note that other fields are read-only.
+- Select the checkbox of a ruleset and click the Delete icon to delete a ruleset, if it is not marked as **Do** **Not** **Delete**.
+- Print or export the data.
+
+> **warning**
+>
+> Note
+> 
+> When you delete a ruleset that was recently downloaded through automatic downloads, the appliance cannot retrieve or automatically download this ruleset version again. You must manually download the ruleset and then manually deploy it to the Grid. For information about manual downloads, see [*Manually Uploading Rulesets*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408834).

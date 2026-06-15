@@ -1,0 +1,44 @@
+---
+title: "Merging DNS Infrastructure Protection Profiles"
+source: "/space/nios90/280408741"
+pageId: "280408741"
+---
+You can merge the DNS Infrastructure Protection rulesets from one profile to another before you publish it. The following rules are applicable when you update a ruleset that is assigned to a profile and migrate the profile settings to a new ruleset:
+
+- NIOS migrates the profile settings of the rule to the new ruleset when you override a rule, which exists in both the old and the new ruleset, at the profile level.
+- The profile ruleset continues to inherit the settings from the Grid if you do not override a rule that exists in both the old and the new ruleset.
+- NIOS removes the profile settings for a rule when you override the rule settings for a profile and the rule does not exist in the new ruleset.
+- When a rule exists only in a new ruleset, it inherits the settings from the Grid by default.
+- Parameters for custom rules are migrated only when the same custom rule exists in the new ruleset.
+
+You can view differences between the old profile and the new one before you publish the changes. The appliance shows you the system-level changes, including new rules, deleted rules, and rule syntax, between the two rulesets and customizations from the old profile. You can then select the changes you want to merge into the new profile. You can also modify some of these customized changes before you merge them into the new profile. When merging profiles, all rules in the old ruleset and new ruleset are compared and identified by their rule IDs.   
+To merge a DNS Infrastructure Protection profile:
+
+1. From the **Data** **Management** tab, select the **Security** tab -> select either **DNS Infrastructure Protection** **Rules** or **Members** or **Profiles** tab, click **Merge** from the Toolbar, and then select **Profile** from the drop-down list.
+2. In the *Merge* *Changes* *Into* *Profile* *Ruleset* editor, complete the following:
+   
+   - **Old** **Profile**: From the drop-down list, select the DNS Infrastructure Protection profile from which you want to merge changes into the new profile. The **Comment** field displays additional information about the profile and **Ruleset** **version** displays the ruleset version.
+   - **New** **Profile**: From the drop-down list, select the DNS Infrastructure Protection profile to which you want to merge changes. The **Comment** field displays additional information about the profile and **Ruleset** **version** displays the ruleset version.
+   - **Get** **Differences**: Click this to display a list of differences between the old and new profiles. The appliance displays system-level changes in the **System** **changes** **from** **old** **profile** **(x** **items)** table, where x is the total number of changed rules between the old and new profiles. The appliance merges all system-level changes listed in this table into the new profile.  
+       
+     The table displays the following information for each changed rule:
+   - **Rule** **ID**: The rule ID of the changed rule. You can click the rule link and modify parameters in the rule editor.
+   - **Rule**** Name**: The name of the rule.
+   - **Type**: Indicates whether the rule is a newly added rule or it has been deleted.
+   - **Old**** Ruleset**** Value**: Displays the old ruleset value.
+   - **New ****Ruleset**** Value**: Displays the new ruleset value.  
+       
+     The **Customizations** **from** **old** **profile** **(x** **items)** table displays customized rule parameter changes between the old and new profile, where x is the total number of changed rules. You can select all or specific changed rules in this table to be merged into the new profile. You can also modify the parameters for selected rules before merging the changes into the new profile. This table displays the following information for each rule:
+   - **Member/Profile**: The Grid member on which this rule is currently running.
+   - **Rule ****ID**: The rule ID of the changed rule. You can click the rule link and modify parameters in the rule editor.
+   - **Rule**** Name**: The name of the rule.
+   - **Old**** Ruleset**** Value**: Displays the old ruleset value.
+   - **New**** Ruleset**** Value**: Displays the new ruleset value.
+   - **Action**: Displays what the appliance will do to changes in this rule when you merge the profiles.
+3. Click **Merge** **Changes** to copy all the selected rules and changes you made to specific rules to the new profile. Note that you must select a rule from the **Customizations** **from** **old** **profile** **(x** **items)** table to activate the merging operation.  
+     
+   You can do the following in the *Merge* *Changes* *Into* *Profile* *Ruleset* editor:
+   
+   - Click **Export** to export all the changes listed in both tables to one CSV file. You can export this data after you click **Get** **Differences** and Grid Manager displays changes in both tables.
+   - Perform another profile merge by selecting another old profile and new profile.
+   - Click **Close** to exit the editor. Note that the editor does not close automatically after a merge.

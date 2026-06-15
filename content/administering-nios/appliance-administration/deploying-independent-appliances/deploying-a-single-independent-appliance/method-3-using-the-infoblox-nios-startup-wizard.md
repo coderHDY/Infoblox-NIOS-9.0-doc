@@ -1,0 +1,60 @@
+---
+title: "Method 3 – Using the Infoblox NIOS Startup Wizard"
+source: "/space/nios90/1330807637"
+pageId: "1330807637"
+---
+When you first make an HTTPS connection to a NIOS appliance, the *Infoblox NIOS Startup Wizard* guides you through the deployment options and basic network settings. You can also change the password of the superuser (admin) and set up the system clock.
+
+Note that you can configure network settings using the Startup wizard any time after you have configured the appliance. To start the wizard, from Grid Manager, select the **System** tab, and then click **System** **Properties** -> **Startup** **Wizard** from the Toolbar.
+
+To make an HTTPS session to the appliance, you must be able to reach its IP address from the management system.
+
+> **warning**
+>
+> ### Note
+> 
+> If you have already set the IP address of the LAN1 port through the CLI so that you can reach it over the network—and you have already cabled the appliance to the network—you can skip the first step.
+
+1. If you have not changed the default IP address (192.168.1.2/24) of the LAN1 port through the CLI—and the subnet to which you connect the appliance is not 192.168.1.0/24—put your management system in the 192.168.1.0/24 subnet and connect an Ethernet cable between the management system and the appliance.
+2. Open an Internet browser window and enter **https://*****&lt;IP*****_*****address*****_*****of*****_*****the*****_*****appliance&gt;***** ** to make an HTTPS connection. For information about supported browsers, see [*Supported Browsers*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/154208437).  
+   Several certificate warnings may appear during the login process, because the preloaded certificate is self-signed and has the host name [*www.infoblox.com*](http://www.infoblox.com/)[,](http://www.infoblox.com/) which may not match the destination IP address you entered in step 1. To stop the warning messages from occurring each time you log in to Grid Manager, you can generate a new self-signed certificate or import a third-party certificate with a common name that matches the FQDN (fully qualified domain name) of the appliance. For information, see [*Managing Certificates*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280266962)*.*
+3. Enter the default username and password (**admin** and **infoblox**) on the Grid Manager login page, and then click **Login** or press **ENTER**. For information, see [*Logging on to the NIOS UI*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280759087).
+4. Read the Infoblox End-User License Agreement (EULA), and then click **I Accept**.  
+   Note that if you want to view the privacy policy of Infoblox, then on the EULA screen, click **Infoblox Privacy Policy**. Grid Manager displays the policy on a new browser tab.
+5. The *Grid Setup* wizard appears. In the first screen of the *NIOS* *Setup* wizard, complete the following:
+6. **Type** **of** **Network** **Connectivity:** Select the type of network connectivity for the appliance from the drop-down list:
+   
+   - **IPv4** **and** **IPv6**: Select this to configure a dual mode appliance.
+   - **IPv4**: Select this to configure an IPv4 appliance.
+   - **IPv6**: Select this to configure an IPv6 appliance.
+7. **Are** **you** **configuring** **an** **HA** **pair** **or** **a** **standalone** **appliance?**: Select **Configuring** **a** **standalone** **appliance**. To configure an independent HA pair, see [*Deploying an Independent HA Pair*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280667859)*.*
+8. Click **Next** and complete the following to configure network settings:
+   
+   - **Host** **Name**: Enter a valid domain name for the appliance.
+   - **Ports** **and** **Addresses**: This table lists the network interfaces based on the type of network connectivity of the appliance. For an IPv4 appliance, specify the network information for LAN1 (IPv4) interface and for an IPv6 appliance, specify the network information for LAN1 (IPv6) interface. For a dual mode appliance, specify the network information for both LAN1 (IPv4) and LAN1 (IPv6) interfaces.  
+     Enter correct information for the following by clicking the field:
+     
+     - **Interface**: Displays the name of the interface. You cannot modify this.
+     - **IP** **Address**: Type the IPv4 or IPv6 address depending on the type of interface. An IPv6 address is a 128-bit number in colon hexadecimal notation. It consists of eight 16-bit groups of hexadecimal digits separated by colons (example: 2001:db8:0000:0123:4567:89ab:0000:cdef or 2001:db8::123:4567:89ab:0:cdef).
+     - **Subnet** **Mask** **(IPv4)** **or** **Prefix** **Length** **(IPv6)**: Specify an appropriate subnet mask for IPv4 address or prefix length for IPv6 address. The prefix length ranges from 2 to 127.
+     - **Gateway**: Type the IPv4 or IPv6 address of the default gateway depending on the type of interface. For the IPv6 interface, you can also type **Automatic** to enable the appliance to acquire the IPv6 address of the default gateway and the link MTU from router advertisements.
+     - **Port** **Settings**: Select the port settings from the drop-down list. The list contains all the settings supported by the hardware model. The default is **Automatic**. The appliance automatically detects the port settings.
+9. Click **Next** and complete the following to set admin password:
+   
+   - **Yes**: To change the default password.
+   - **No**: To keep the default password. Infoblox recommends that you change the default password.  
+     When you select **Yes**, complete the following:
+   - **Password**: Enter a password for the superuser admin account. The password must be a single alphanumeric string without spaces and at least four characters long. The password is case-sensitive.
+   - **Retype** **Password**: Enter the same password.
+10. Click **Next** and complete the following to configure time settings:
+   
+   - **Time** **Zone**: Select the applicable time zone from the drop-down list. The default is **UTC**.
+   - **Would** **you** **like** **to** **enable** **NTP?**:
+   - Select **Yes** to synchronize the time with external NTP servers, and then click the Add icon. Grid Manager adds a row to the NTP Server table. Click the row and enter either the IP address (IPv4 or IPv6) or the resolvable host name of an NTP server. You can view a list of public NTP servers at [ntp.isc.org](http://ntp.isc.org).
+   - Select **No** to specify the time settings for the appliance.
+   - **Date**: Enter the date in YYYY-MM-DD format. You can also click the calendar icon to select a date from the calendar widget.
+   - **Time**: Enter the time in HH:MM:SS AM/PM format. You can also click the clock icon to select a time from the drop-down list.
+11. Click **Next** to view the summary of the configuration. Review the information and verify that it is correct. You can change the information that you entered by clicking **Previous** to go back to a previous step.
+12. Click **Finish**. The appliance restarts and disconnects Grid Manager.
+
+In a dual mode independent appliance, the communication protocol for all the services is set to IPv4 by default. You can change the default communication protocol for the services.

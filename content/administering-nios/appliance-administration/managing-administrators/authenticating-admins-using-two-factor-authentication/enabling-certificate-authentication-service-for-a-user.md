@@ -1,0 +1,22 @@
+---
+title: "Enabling Certificate Authentication Service for a User"
+source: "/space/nios90/1425473750"
+pageId: "1425473750"
+---
+You can restrict users to use certificate based authentication only. Note that certificate authentication service with a direct-match searches only for users with certificate authentication service enabled. Such users are successfully authenticated by the certificate authentication service using auto-match.
+
+1. From the **Administration** tab, click the **Administrators** tab -> **Admins** tab -> *admin_account* checkbox, and then click the Edit icon.
+2. In the *Administrator* editor, click the **General** tab, and then click the **Advanced** tab.
+3. In the **General** **Advanced** tab, complete the following:
+
+- **Enable** **Certificate** **Authentication**: Select this checkbox to enable certificate authentication for the selected user. You must configure certificate authentication service and associate a valid client CA certificate with the selected user. This is disabled by default.
+- **Client Certificate Number**: You can specify a client certificate number only when you select the **Enable Certificate Authentication** checkbox. This is disabled by default. Enter the serial number as mentioned in the certificate. Examples: 397F9435000100000032 (hexadecimal format), 123 (decimal format), and so on.
+- **Client CA Certificate**: You must associate a CA certificate that signs the client certificate. Click **Select** to associate a CA certificate. When you select a CA certificate from the list, NIOS displays the subject of the selected CA certificate. The *CA Certificate Selector* dialog box displays the following information about CA certificates:
+  
+  - **Issuer**: The name of the trusted CA that issued the certificate.
+  - **Valid From**: The date from which the certificate becomes valid.
+  - **Valid To**: The date until which the certificate is valid.
+  - **Subject**: The name of the certificate.  
+    Click **OK** to select and associate the client CA certificate with the selected admin user.
+
+1. Save the configuration.

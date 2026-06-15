@@ -1,0 +1,6 @@
+---
+title: "Managing NS Records"
+source: "/space/nios90/1422721137"
+pageId: "1422721137"
+---
+An NS record identifies an authoritative DNS server for a domain. Each authoritative DNS server must have an NS record. Grid Manager automatically creates NS records when you assign a Grid member as the primary server for a zone or when you assign an NS group to a zone. Grid Manager generates two NS records; an authoritative NS record for the current zone; and a delegation NS record for the parent zone for each name server available in the NS group. You cannot edit an automatically generated NS record. Note that when you delete a name server from an NS group, the NS record associated with the name server is deleted. For information about using NS Groups, see [*Importing Zone Data*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280665197). You can manually create NS records for other zones. NS records associated with one or more IP addresses are used for related A record and PTR record generation. You can configure an NS record for anycast IP addresses on the appliance. For more information about anycast, see [*About Anycast Addressing for DNS*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280664099).

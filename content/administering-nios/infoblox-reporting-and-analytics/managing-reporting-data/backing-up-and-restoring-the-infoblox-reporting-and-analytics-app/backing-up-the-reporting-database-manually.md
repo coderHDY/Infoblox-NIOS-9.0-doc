@@ -1,0 +1,35 @@
+---
+title: "Backing Up the Reporting Database Manually"
+source: "/space/nios90/1356824851"
+pageId: "1356824851"
+---
+- From the **Infoblox** **Grid** tab, select **Backup** -> **ReportingBackup** -> **ManualBackup** from the Toolbar.
+- In the *ManualReportingBackup* editor, complete the following:
+  
+  - **Status**: Displays the status of the backup process of the last operation.
+  - **Backupto**: Select the destination of the backup file from the drop-down list:
+    
+    - **FTP**: Back up the reporting database to an FTP server.
+      
+      - **Filepath**: Enter the directory path. For example, you can enter **/archive/backups/Infoblox/**.
+      - **IP Address of FTP Server**: The IP address of the FTP server.
+      - **Username**: Enter the username of your FTP account.
+      - **Password**: Enter the password of your FTP account.
+    - **SCP**: Back up the reporting database to an SSH server that supports SCP.
+      
+      - **Filepath**: Enter the directory path. For example, you can enter **/archive/backups/Infoblox/**.
+      - **IP Address of SCP Server**: The IP address of the SCP server.
+      - **Username**: Enter the username of your SCP account.
+      - **Use Keys**: If you select this checkbox, you can back up files to SCP without entering the password. The first time you select the checkbox, you need to enter the password. However, during subsequent times, the Infoblox server verifies whether Infoblox keys are available on the SCP server. If they are available, you can click the **Backup** button without entering the password. If Infoblox keys are not available on the SCP server, the following message is displayed:  
+        `Reporting backup has failed.`
+      - **Password**: Enter the password of your SCP account.
+      - **Keys Type**: Select the SSH key type to be uploaded. At present, only ECDSA and RSA keys are supported. Click **Upload Keys** to upload the keys to the SCP server. If the keys are not available, click **Download Keys** to download the keys and manually add them to the SCP server.
+
+> **warning**
+>
+> ### Notes
+> 
+> - If you are using Fedora, ECDSA keys are supported only on Fedora versions later than Fedora 12.
+> - When you select **FTP** or **SCP**, ensure that you have a valid user name and password on the server prior to backing up the files. Also ensure that the target SSH server has the required permissions for an SCP backup. The permission must be 755 and the target server must have write permission to the directory to which you upload the backup file.
+> - For an SCP backup, ensure that you are logged in as the user for whom the key was created. Also ensure that the .ssh directory on the server and the files it contains, have the correct permissions: `chmod 600 ~/.ssh/authorized_keys && chmod 700 ~/.ssh/`
+> - If you promote a Grid Master or perform an HA failover, you must upload the SSH key once again for a successful SCP backup using keys.

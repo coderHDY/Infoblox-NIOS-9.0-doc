@@ -1,0 +1,170 @@
+---
+title: "operation PUSH and SHIFT without setting if_exists"
+source: "/space/nios90/1375044913"
+pageId: "1375044913"
+---
+If `destination_key` is set, the assumption is to push or shift to a dictionary; otherwise, it is to push or shift to a list.
+
+For pushing to a list, if the `destination` variable exists and is a list, the list of values in `values` will be added to the existing list. With PUSH, it means that the values will be added to the right side of the list (at the end) of the list. With SHIFT however, the values will be added to the left side (at the beginning) of th list.
+
+If the `destination` variable is a dictionary, it will be converted to a list that contains only one element with the value appended to it. This means that for XML deserializing and JSON values, it is possible to create a list by pushing it on to an existing scalar value.
+
+For pushing to a dictionary, it means that with `destination_key` set, if the `destination` variable exists and is anything but a dictionary, it is considered as an error. If it is a dictionary however, the value above will be added with its key set to `destination_key` overwriting any existing value.
+
+If the variable denoted by `destination` has a composite value, the COMPOSITE type can be pushed or shifted to it only. If the destination composite value contains text, the text will be replaced with the composite value. In other cases, the PUSH operation using the new value will be added to the right side of the children list. For the SHIFT operation, the new value will be added to the left side of the children list.
+
+The following are several examples of the ASSIGN operation having namespace E:
+
+`{'some_field': 'some_value'}`
+
+and namespace L as follows:
+
+`{`
+
+`   'some_list': ['item1', 'item2'],`
+
+`   'some_dict': {'key': 'val'},`
+
+`   'comp1': {`
+
+`     'index': {}, '&lt;xmla&gt;': True,`
+
+`     'attrs': {`
+
+`        'attr1_b': 'another_value',`
+
+`        'attr1_a': 'some_value'`
+
+`     },`
+
+`     'value': ['tag_1_content'],`
+
+`     'name': 'tag_1'`
+
+`   },`
+
+`   'comp2': {`
+
+`     'index': {}, '&lt;xmla&gt;': True,`
+
+`     'attrs': {},`
+
+`     'value': ['tag_2_content'],`
+
+`     'name': 'tag_2'`
+
+`   }`
+
+`}`
+
+### **(1) When PUSH or SHIFT to a list:**
+
+`{`
+
+`   'operation': 'PUSH',`
+
+`   'type': 'SINGLE',`
+
+`   'destination': 'L:some_list',`
+
+`   'values': ['${E:A:some_field}_right'],`
+
+`},`
+
+`{`
+
+`   'operation': 'SHIFT',`
+
+`   'type': 'LIST',`
+
+`   'destination': 'L:some_list',`
+
+`   'values': ['left_${E:A:some_field}']`
+
+`},`
+
+It returns namespace L as the following:
+
+`{'some_list': [['left_some_value'], 'item1', 'item2', 'some_value_right']}`
+
+### **(2) When PUSH or SHIFT to a dictionary, it returns the following:**
+
+`{'some_dict': {`
+
+`  'push1': 'item',`
+
+`  'push2': ['item_1', 'item_2'],`
+
+`  'key': 'val'`
+
+`}}`
+
+---
+
+**Note**: There is no difference between PUSH and SHIFT when destination is DICTIONARY.
+
+---
+
+### **(3) When PUSH or SHIFT to a composite value:**
+
+`{`
+
+`   'operation': 'PUSH',`
+
+`   'type': 'COMPOSITE',`
+
+`   'destination': 'L:comp1',`
+
+`   'name': 'pushed',`
+
+`   'composite_value': ''`
+
+`},`
+
+`{`
+
+`   'operation': 'SHIFT',`
+
+`   'type': 'COMPOSITE',`
+
+`   'destination': 'L:comp1',`
+
+`   'source': 'L:comp2'`
+
+`},`
+
+It returns the following:
+
+`{`
+
+`   'comp1': {`
+
+`   'index': {u'pushed': 1, 'tag_2': 0},`
+
+`   '&lt;xmla&gt;': True,`
+
+`   'attrs': {'attr1_a': 'some_value', 'attr1_b': 'another_value'},`
+
+`   'value': [`
+
+`     {'index': {}, '&lt;xmla&gt;': True, 'attrs': {}, 'value': ['tag_2_content'], 'name': 'tag_2'},`
+
+`     {'index': {}, '&lt;xmla&gt;': True, 'attrs': {'attr': 'val'}, 'value': [], 'name': 'pushed'}`
+
+`   ],`
+
+`   'name': 'tag_1'`
+
+`  }`
+
+`}`
+
+Note that the first operation (PUSH) overwrites existing value and the second operation (SHIFT) shifts the value to the existing list. This composite value can be serialized to the following XML:
+
+`&lt;tag_1 attr1_a="some_value" attr1_b="another_value"&gt;`
+
+`  &lt;tag_2&gt;tag_2_content</tag_2>`
+
+`  &lt;pushed attr="val"/&gt;`
+
+`</tag_1>`

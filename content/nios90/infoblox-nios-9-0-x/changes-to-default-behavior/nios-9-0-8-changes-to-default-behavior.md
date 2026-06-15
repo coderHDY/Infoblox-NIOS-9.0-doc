@@ -1,0 +1,13 @@
+---
+title: "NIOS 9.0.8 - Changes to Default Behavior"
+source: "/space/nios90/1856143489"
+pageId: "1856143489"
+---
+| **Security Vulnerability Prevention** | To prevent security vulnerabilities, NIOS 9.0.8 introduces the following requirements across all the authentication methods:  - Admin usernames must not contain forward slashes or backward slashes. - SSH key names cannot contain forward slashes, backward slashes, control characters, bash executable commands, or special characters. SSH key names must also be 64 characters or fewer. |
+| --- | --- |
+| **DNS Infrastructure**   **Protection** | From NIOS 9.0.8 onwards, Advanced DNS Protection and Threat Protection have been renamed to DNS Infrastructure Protection. |
+| **DNS Forwarding Proxy** | In versions before NIOS 9.0.8, changes in DNS Forwarding Proxy health status triggered a DNS service restart, causing outages.  From NIOS 9.0.8 onwards, the named.config file is updated and reloaded whenever DNS Forwarding Proxy transitions between healthy and unhealthy states, preventing unnecessary DNS restarts. |
+| **DNS** | - Starting from NIOS 9.0.8, the default behavior of the **Resolver queries timeout** field in the **Grid DNS Properties/Member DNS Properties** editor &gt; **Queries** tab, when set to 0, has been changed to wait for 10 seconds from the earlier value of 30 seconds before timing out. - From NIOS 9.0.8 onwards, when you disable a DNS view, a warning that the action may cause a service impact that is displayed. |
+| **Licensing** | - The banner message displayed in Grid Manager for expiring licenses now shows the count of expiring licenses, days until the earliest expiry, and the earliest expiry date. - A new message in the licenses banner is displayed for the earliest expiring temporary license that shows the days until the earliest expiry and the expiry date. The banner color changes to red as the license starts to fall into the 30-day expiry window. Emails are sent out every 24 hours from the last 30-day window (if email notifications are configured). - After upgrading to version NIOS 9.0.8, the **Validity Type** column on the **Licenses** tab is hidden by default. To make it visible, select the **Validity Type **checkbox in the *Edit Columns* dialog box. |
+| **Platform** | Starting from NIOS 9.0.8, the default value of syslog proxy port for both UDP and TCP is 1514. This is applicable only for a fresh 9.0.8 installation and not for an upgrade. Infoblox recommends that you use port 1514 or any other port which is above 1023 as the syslog proxy port for both UDP and TCP. |
+| **CLI commands** | From NIOS 9.0.8 onwards, the `set debug_analytics` CLI command has been changed to `set debug_threat_insight`. |

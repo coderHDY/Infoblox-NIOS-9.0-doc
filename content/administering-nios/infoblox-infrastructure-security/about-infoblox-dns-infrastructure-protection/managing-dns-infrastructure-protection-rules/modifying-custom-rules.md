@@ -1,0 +1,24 @@
+---
+title: "Modifying Custom Rules"
+source: "/space/nios90/280766238"
+pageId: "280766238"
+---
+1. From the **Data** **Management** tab, select the **Security** tab -> **DNs Infrastructure** **Protection** **Rules** tab.
+2. In the Grid Rules table, expand the category to which the rule belongs, select the checkbox, and then click the Edit icon.
+3. In the Custom Rule editor, select the **General** tab -> **Basic** tab to modify the following:
+   
+   - **Comment**: Enter information about the custom rule.
+   - **Disable**: Select this checkbox to disable the custom rule.  
+       
+     You can also view the following information (but you cannot modify it):
+   - **Template**: Displays the name of the template the custom rule uses.
+   - **Rule**** ID**: Displays the rule ID of the custom rule.
+   - **Name**: Displays the name of the rule.
+   - **Category**: Displays the category to which the custom rule belongs.
+   - **Description**: Displays the description of the custom rule.
+4. In the Custom Rule editor, select the **Settings** tab -> **Basic** tab to modify the following:
+   
+   - **Log ****Severity**: Select the log severity level from the drop-down list. You can select **Critical**, **Major**, **Warning**, or **Informational**. Log severity may have an effect on how other Grid services respond to particular events. The selection here corresponds to the severity levels you can configure for logging in the syslog.
+   - **Rule ****Parameters**: In the Rule Parameters table, the **Description** column displays the rule parameters. Click the row and enter the corresponding values for the rule parameters in the **Value** column.
+   - **Action**: Displays the operation which the appliance performs when this event occurs. Some rules are restricted to specific actions. For example, the action for all blacklisting rules is set as **Drop** where the appliance drops the packets and logs the activity when such an event occurs. The action for all whitelisting rules is set as **Pass**, where the appliance silently passes the packets without logging when such an event occurs.
+5. Save the configuration.

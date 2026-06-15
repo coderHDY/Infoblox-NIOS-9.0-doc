@@ -1,0 +1,16 @@
+---
+title: "Cloud API Request Process"
+source: "/space/nios90/1471219754"
+pageId: "1471219754"
+---
+As described in the below table, all cloud API requests are subject to the following process before responses are returned. The appliance
+
+*Cloud* *API* *Request* *Process*
+
+| **Steps** | **Descriptions** | **Configuration** **that** **affects** **the** **outcome** **of** **this** **step** |  |
+| --- | --- | --- | --- |
+| Authentication and categorization | All cloud API requests are authenticated based on the authentication sources. Once authenticated, the requests are categorized as either a cloud API request or  not. All requests that specify user identity as users defined in admin groups with cloud API access are [*Managing Admin Groups and Admin Roles*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408487) categorized as cloud API requests. | Define admin user accounts that can be used to send cloud API requests.  For information, see [*Managing Admin Groups and Admin Roles.*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408487) |  |
+| Authorization | All cloud API requests are subject to authorization based on the ACLs (Access Control Lists) defined for the Grid or Cloud Platform Appliance. You can control which admin accounts can be used to send API requests. The ACLs can contain admin users in admin groups with cloud API access or remote authenticated users. | Define ACLs on the Grid Master or Cloud Platform Appliance.   For information, see [*Configuring Grid and Member Cloud API Properties.*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280407427) |  |
+| Proxying Requests | If a Cloud Platform Appliance is not authoritative for a cloud API request, it proxies the request either to the authoritative Cloud Platform Appliance or to the Grid Master for processing. Similarly, if an object has been delegated and the API request is made to the Grid Master, the Grid Master proxies that request to the authoritative Cloud Platform Appliance. | Ensure that HTTPS connectivity between each Cloud Platform member and between each Cloud Platform member and the Grid Master is functioning properly for proxying.   For information, see Proxying Cloud API Requests below. |  |
+| Validation | NIOS performs a final validation on the cloud API request based on permissions configured for the admin users and restrictions for the applicable objects. If the request is processed within the scope of an explicit delegation, the admin user is considered to have full permissions within the scope, and any permission defined for admin groups with cloud API access is ignored. Otherwise, the request is subject to validation for all permissions defined for admin groups with cloud API access. | Define admin permissions for admin groups with cloud API access.   For information, see [*About Admin Groups*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280275587). |  |
+| Auditing | Cloud API related events are logged to the NIOS syslog of  the Grid member that processes the API requests instead of to the NIOS audit log. | Configure syslog server for the cloud member.   For information, see [*Viewing the Syslog*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/1380844786). |  |

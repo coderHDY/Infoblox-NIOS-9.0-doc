@@ -1,0 +1,19 @@
+{
+  "name": "admini-doc",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "crawl": "node scripts/crawl.mjs --root 280822124 --space nios90",
+    "crawl:full": "node scripts/crawl.mjs --full-space --space nios90",
+    "crawl:retry": "node scripts/crawl.mjs --retry-missing && node scripts/write-stubs.mjs",
+    "fix-links": "node scripts/fix-links.mjs",
+    "sanitize": "node scripts/sanitize-md.mjs",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "playwright": "^1.52.0",
+    "vitepress": "^1.6.3"
+  }
+}

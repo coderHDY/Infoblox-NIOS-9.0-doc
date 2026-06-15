@@ -1,0 +1,17 @@
+---
+title: "Changing the Communication Protocol for a Dual Mode Independent Appliance"
+source: "/space/nios90/1330774673"
+pageId: "1330774673"
+---
+You can change the default communication protocol for a dual mode appliance. You can force the appliance to use a specific protocol for the reporting services and for services with two types of resolution (A and AAAA records), you can set the preferred communication protocol.
+
+To change the communication protocol for a dual mode independent appliance, complete the following:
+
+1. From the **System** tab, select the **System** **Manager** tab -> click **System** **Properties** from the Toolbar, and select **Edit** from the drop-down list.
+2. In the *System* *Properties* editor, select the **Network** tab -> **Basic** tab, and then complete the following:
+   
+   - **Communication** **Protocol** **Settings** **and** **Preferences**: Select either **IPv4** or **IPv6** from the drop-down list. This setting will force the appliance to use the specified protocol for the reporting services and this is the preferred protocol for services with two types of resolution (A and AAAA records).
+   - **Customized** **Settings**: Select this and perform the following:
+     
+     - **Always** **use** **this** **Communications** **Protocol** **for**: Select either **IPv4** or **IPv6** from the drop-down list. This setting will force the appliance to use the specified communication protocol for reporting services.
+     - **Always** **prefer** **this** **Communications** **Protocol** **for**: Select either **IPv4** or **IPv6** from the drop-down list to specify the preferred communication protocol for the listed services, which has two types of resolution (A and AAAA records). The appliance uses the preferred protocol first for the service.

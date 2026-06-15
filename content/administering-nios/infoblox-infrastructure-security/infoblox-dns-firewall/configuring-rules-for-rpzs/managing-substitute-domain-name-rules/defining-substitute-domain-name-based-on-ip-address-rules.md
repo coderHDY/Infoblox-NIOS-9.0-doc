@@ -1,0 +1,20 @@
+---
+title: "Defining Substitute Domain Name (Based on IP address) Rules"
+source: "/space/nios90/1321109120"
+pageId: "1321109120"
+---
+To define substitutes for IP addresses:
+
+1. From the **Data** **Management** tab, select the **DNS** tab -> **Response** **Policy** **Zones** tab, select *DNS_View* -> *Zone,* and then click **Add** -> select **Substitute** **(Domain** **Name)** **Rule** -> **Substitute** **Domain** **Name** **(IP** **Address)** **Rule**.  
+   or  
+   From the **Data** **Management** tab, select the **DNS** tab -> **Response** **Policy** **Zones** tab, and then select a zone. Expand the Toolbar, click **Add** -> select **Substitute** **(Domain** **Name)** **Rule** -> **Substitute** **Domain** **Name** **(IP** **Address)** **Rule**.
+2. The following fields are displayed in the *Add* *a* *Substitute* *Domain* *Name* *(IP* *Address)* *Rule* wizard:
+   
+   - **IP** **address** **or** **Network:** Enter the IP address or network for which you want to define a substitute. Click **Select** **Zone** to select a different zone.
+   - **DNS** **View:** Displays the DNS view to which the selected RPZ belongs.
+   - **Policy**: Displays the selected policy.
+   - **Substituted** **Name:** Enter an alternative domain name or IP address that has to be substituted with the actual IP address. Click **Select** **Zone** to select a different zone.
+   - **Comment**: Optionally, enter additional information.
+   - **Disable**: Clear the checkbox to enable the substitute rule. Select the checkbox to disable it.
+3. Click **Next** to define extensible attributes.
+4. Save the configuration.

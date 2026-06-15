@@ -1,0 +1,6 @@
+---
+title: "Inheriting Grid Rule Settings"
+source: "/space/nios90/280275797"
+pageId: "280275797"
+---
+When you select this option, NIOS automatically inherits the rule settings of the Grid for the respective profile. For example, if you update a rule at the Grid level, you can select this option to reflect the same changes in the profile. To inherit Grid rule settings for the selected profile, from the **Data** **Management** tab, select the **Security** tab -> **Profiles** tab, select the DNS Infrastructure Protection profile, click the Action icon  and then select **Inherit** **Grid** **Rule** **Settings**. Click **Yes** in the confirmation dialog box to inherit the settings.

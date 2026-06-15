@@ -1,0 +1,20 @@
+---
+title: "Defining DNS and DHCP Permissions on Grid Members"
+source: "/space/nios90/1343095499"
+pageId: "1343095499"
+---
+You can restrict certain admin groups or roles to perform specific DNS and DHCP tasks on specific Grid members by assigning the correct global and object permissions. You can use this feature to separate the DNS and DHCP administration on different Grid members. For example, you can create an admin group or role that can only create, modify, and delete DHCP ranges in a specific network on a specific member in the Grid. This admin group or role is restricted to the specified tasks on the selected Grid member. It cannot perform other DNS or DHCP tasks on this member, and it cannot perform the specified tasks on other Grid members.  
+For example, you can define permissions that allow admins to create, modify, and delete DHCP ranges in network 10.0.0.0/8 on Grid member "[sales.infoblox.com](http://sales.infoblox.com)" by granting read/write object permissions to all DHCP ranges, network 10.0.0./8, and member DHCP on [sales.infoblox.com](http://sales.infoblox.com). Admins with these permissions can only add, modify, and delete DHCP ranges in network 10.0.0.0/8 on Grid member [sales.infoblox.com](http://sales.infoblox.com). They cannot perform other DHCP or DNS tasks on the member, and they cannot perform these tasks on other Grid members.  
+For information about required permissions for specific DNS and DHCP tasks, see  [*Administrative*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237)[   ](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237)[*Permissions*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237)[   ](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237)[*for*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237)[   ](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237)[*Common*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237)[   ](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237)[*Tasks*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408237).  
+You can define the following DNS and DHCP permissions for an admin group or role:
+
+- Grid DNS or Grid DHCP: Admins with read/write permissions can manage any DNS or DHCP resources on any Grid members. They can also modify Grid DNS or Grid DHCP properties and any member DNS and member DHCP properties. Admins with read-only permissions can only view DNS or DHCP resources. They cannot modify any DNS or DHCP resources or restart related services.
+- Member DNS or Member DHCP: Admins with read/write permissions can perform the defined DNS or DHCP tasks only on the specified Grid member, not any other members. They can also modify DNS or DHCP properties on the specified member. Admins with read-only permission cannot assign the Grid member to any DNS or DHCP resources.
+- Restart DNS or Restart DHCP on member: Admins with read/write permissions can restart the DNS or DHCP service on the specified Grid member, not any other members. However, they cannot modify DNS or DHCP properties on the member. They can assign the specified Grid member to any DNS or DHCP resources, but they cannot assign any other Grid members to DNS or DHCP resources.
+
+To specify member DNS and DHCP permissions, define DNS or DHCP permissions at the global or object level for an admin group or admin role, as described in Defining Global Permissions and Defining Object Permissions above. Ensure that you include the Grid member object to which you want to restrict DNS or DHCP administration. You can assign valid permissions to administrators to manage Kerberos keys. For more information, see [*Configuring GSS-TSIG keys*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280405160).  
+You can also control whether the admins can modify DNS or DHCP properties on a member, as described in Modifying Permissions on a Grid Member below.
+
+For more information, see
+
+*[children]*

@@ -1,0 +1,26 @@
+---
+title: "Adding DNS Infrastructure Protection Profiles"
+source: "/space/nios90/280668792"
+pageId: "280668792"
+---
+You can create a DNS Infrastructure Protection profile and associate an active ruleset with it. Infoblox supports common DNS Infrastructure Protection rulesets for both hardware and Software DNS Infrastructure Protection members. You can either upload a ruleset or download rulesets from a server. You can create any number of DNS Infrastructure Protection profiles, but you can select only a maximum of five rulesets in combination at the Grid, member and profile levels. For more information about rulesets, see [*Understanding DNS Infrastructure Protection Rulesets and Rules*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280270117).  
+The DNS Infrastructure Protection profile allows you to create your own set of rules for either a member or a group of members that experience a similar kind of traffic. After you define a profile, you can clone it and test the copied settings for a new ruleset on one member before publishing the changes for a group of members that are associated with the profile.  
+To define DNS Infrastructure Protection profiles:
+
+1. From the **Data** **Management** tab, select the **Security** tab -> **Profiles** tab and then click the *Add* icon.
+2. In the *Add* *DNS Infrastructure* *Protection* *Profile* *Wizard*, add the following:
+   
+   - **Name**: Enter a name for the DNS Infrastructure Protection profile.
+   - **Comment**: Enter information about the DNS Infrastructure Protection profile.
+   - **Active** **Ruleset** **Version**: Select a value from the drop-down list. This indicates the current ruleset that is used for the respective DNS Infrastructure Protection profile. If you inherit a ruleset from the Grid and later change the respective ruleset at the Grid level, the new ruleset is not reflected in the profile. You must manually change the selected ruleset for the profile. For more information about active rulesets, see [*Understanding DNS Infrastructure Protection Rulesets and Rules*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280270117).
+   - **Active** **Ruleset** **Comment**: Click **Override** to override the comment.
+   - **Events** **per** **Second** **per** **Rule**: Click **Override** to override the values. This indicates the number of events that is logged per second per rule to allow the appliance to log events to the syslog. Specify the number of events logged per second per rule. The default value is one and the maximum value is 700. Setting the value to 0 (zero) disables the appliance from logging events for the rules. The appliance displays an error message when you enter a value greater than the maximum value. You can override this event filter at the member level. For more information, and guidelines about using this setting, see [*Using the Events Per Second Rule Setting*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/281247745).
+   - **Disable** **multiple** **DNS** **requests** **via** **single** **TCP** **session:** Click **Override** to override the values. This determines if multiple DNS responses through TCP connection are disabled. For more information, see [*Enabling Multiple DNS Requests through a Single TCP Session*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280275855).
+3. Click **Next** to add extensible attributes.
+4. Save the configuration.
+
+> **warning**
+>
+> Note
+> 
+> A member associated with a DNS Infrastructure Protection profile can neither modify **Events** **per** **Second** **per** **Rule** and **Disable** **multiple** **DNS** **requests** **via** **single** **TCP** **session** settings at the member level nor enable or disable rules and change rule parameters at the member level.

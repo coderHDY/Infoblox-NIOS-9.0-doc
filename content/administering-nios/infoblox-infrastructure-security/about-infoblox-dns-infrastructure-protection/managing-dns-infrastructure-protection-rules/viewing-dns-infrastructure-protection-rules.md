@@ -1,0 +1,67 @@
+---
+title: "Viewing DNS Infrastructure Protection Rules"
+source: "/space/nios90/280766170"
+pageId: "280766170"
+---
+You can view the DNS Infrastructure Protection rules in one of the following views:
+
+- Click **Toggle** **Flat** **View** to display a flat list of all the DNS Infrastructure Protection rules. In the flat view, each of the custom, system, and auto rules are listed separately.
+- Click **Toggle** **Tree** **View** to display only the category of DNS Infrastructure Protection rules. You can expand the category of rule to view individual rules listed in each category.
+
+To view rules categories and individual rules in a specific ruleset version:
+
+1. **Grid**: From the **Data** **Management** tab, select the **Security** tab -> **DNS Infrastructure** **Protection** **Rules** tab. **Member**: From the **Data** **Management** tab, select the **Security** tab -> **Members** tab -> *member* link. **Profile**: From the **Data** **Management** tab, select the **Security** tab -> **Profiles** tab -> *profile* link.
+2. In the Grid Security or Member Security table, click the **Version** link and Grid Manager displays the DNS Infrastructure Protection rules by categories. The **Category** column lists all the category to which rules belong.
+3. To view individual rules listed in each category, expand the list by clicking the arrow beside the checkbox. You can view the following information for each rule:
+   
+   - **Category**: The category to which the rule belongs.
+   - **Order**: The number that indicates the order in which the rule will be executed by the appliance. The rule order can change during a ruleset update.
+   - **Rule** **ID**: The ID of the rule.
+   - **Rule** **Name**: The name of the rule. This can contain up to 255 characters.
+   - **Type**: The rule type. This can be **Custom**, **System**, or **Auto**. For more information about each rule type, see [*Understanding DNS Infrastructure Protection Rulesets and Rules*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280270117).
+   - **Disabled**: Displays whether the rule is disabled. A disabled rule does not perform any mitigation functions.
+   - **Comment**: Comments that were entered for the rule. This can contain up to 255 characters.
+   - **Action**: The operation that the appliance performs when the event occurs. This can be one of the following:
+     
+     - **Alert**: The appliance passes the packets and logs the event.
+     - **Drop**: The appliance drops the packets and logs the event.
+     - **Pass**: The appliance passes the packets but does not log the event.
+   - **Description**: Description about the rule. This can contain up to 255 characters.
+   - **Rule Parameters**: Displays the rule parameters that are configured for the rules and the corresponding values for the rule parameters.
+   - **Log Severity**: Log severity level. This can be **Critical**, **Major**, **Warning**, or **Informational**.  
+     You can also do the following in this panel:
+   - Click the Action icon
+     
+     *[image: media]*
+     
+     and select one of the following actions for a rule category:
+     
+     - **Enable** **All** **Rules** **in** **Category**: Select this to enable all the rules in the selected category. For a Grid member, this action overrides the Grid rule settings.
+     - **Disable** **All** **Rules** **in** **Category**: Select this to disable all rules in the selected category. For a Grid member, this action overrides the Grid rule settings.
+     - **Inherit** **Grid** **Rule** **Settings** **in** **Category**: Select this to inherit Grid rule settings for the selected category. This appears only for member settings.
+     - Modify some of the data in the rules table. Double click a row, and modify the data. Click **Save** to save the changes. Note that some fields are read-only.
+     - Select the checkbox of a rule and click the Edit icon to modify the properties of the rule.
+     - Select the checkbox of a custom rule and click the Delete icon to delete a custom rule.
+     - Print or export the data.
+     - Publish changes you make to the rules by clicking **Publish** **Changes** from the Toolbar. For more information, see [*Publishing Rule Updates*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280408857).
+     - Use filters and the **Go** **to** function to narrow down the list. With the autocomplete feature, you can just enter the first few characters of an object name in the **Go** **to** field and select the object from the possible matches.
+
+> **warning**
+>
+> Note
+> 
+> When you use the **Go** **to** function to search for specific rules, Grid Manager may return duplicates of the same rules due to the paging mechanism currently used for displaying information.
+
+- Create a quick filter to save frequently used filter criteria. For more information about using quick filters, see the following section.
+
+# Using Quick Filters
+
+You can use the following quick filters to filter DNS Infrastructure Protection rules in the Grid Rules panel. When you select a filter, Grid Manager displays only the specified rules. Using filters makes it easier to locate specific rules for editing, enabling, and disabling.
+
+- **All** **Auto** **Generated** **Rules**: This option shows all auto-generated rules defined in the Infoblox DNS Infrastructure Protection solution.
+- **All** **Custom** **Rules**: This option shows all whitelisting and blacklisting custom rules defined by NIOS users.
+- **All** **System** **Rules**: All protocol-specific rules associated with particular attack phenomena.
+- **All** **Disabled** **Rules**: This option shows all disabled rules.
+- **All** **Enabled** **Rules**: This option shows all enabled rules.
+
+For more information about filters, see [*Finding and Restoring Data*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280401588).

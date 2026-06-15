@@ -1,0 +1,29 @@
+---
+title: "Manually Uploading Threat Insight Updates"
+source: "/space/nios90/1426555531"
+pageId: "1426555531"
+---
+When you configure a manual update policy, the appliance notifies you about newly available module set and/or allowlist set updates. You can manually upload the updated files and apply them to the Grid.
+
+To manually upload Threat Insight updates:
+
+1. From the **Data** **Management** tab, select the **Threat Insight** tab -> **Allowlist** tab, click **Updates** -> **Manual** **Update** from the Toolbar.
+2. The *Threat Insight* *Upload* dialog displays the following:
+   
+   - **Current** **Allowlist** **Version**: Displays the version of the allowlist set that is currently running on the Grid.
+   - **Last** **Applied** **On**: Displays the timestamp and time zone when the last allowlist set was applied to the Grid. This field changes each time when a allowlist set is applied.
+   - **Latest** **Available** **Module** **Set**: Displays the version string of the latest available module set. This field changes each time when the module set is updated.
+   - **Last** **Applied** **On**: Displays the timestamp and time zone when the last module set was applied to the Grid. This field changes each time when a module is applied.
+     
+     To upload the module set or allowlist set:
+   - **File**: Click **Select** to navigate to the file location, and then upload the file. The appliance displays the file name in this field. You can upload either a module set or a allowlist set. Check the current version numbers of the allowlist and module sets to verify if they have changed before uploading new files.
+
+> **warning**
+>
+> ### Note
+> 
+> You can only update to a newer allowlist set even though you can switch back to an older version of module set, if any. However, if you have configured an **Automatic** update policy, the appliance overwrites the older file version with the new one. To avoid this, you can change the update policy to **Manual** or disable automatic downloads.
+
+Click **Test** to check the changes that will occur during the update, without actually applying the update. You can view update details in the Syslog Viewer. The appliance preserves the uploaded file if you do not click **Update** to update the module set or allowlist set. When you manually upload next time, this file name is displayed in the dialog. You can then choose to apply the update from this file or upload a new file before performing the update. Uploading a new file will remove the file that has not been applied.
+
+1. Click **Update** to update the module set or allowlist set. You can also click **View** **Update** **Results** to view the update results.

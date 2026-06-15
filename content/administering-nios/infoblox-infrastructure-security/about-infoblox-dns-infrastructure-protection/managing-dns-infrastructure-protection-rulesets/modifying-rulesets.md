@@ -1,0 +1,18 @@
+---
+title: "Modifying Rulesets"
+source: "/space/nios90/280766372"
+pageId: "280766372"
+---
+To modify parameters for an existing ruleset:
+
+1. From the **Data** **Management** tab, select the **Security** tab -> **DNS Infrastructure** **Protection** **Rules** tab.
+2. In the Grid Threat Ruleset table, select the ruleset checkbox, and then click the Edit icon.
+3. In the *Threat* *Ruleset* editor, select the **General** tab -> **Basic** tab to modify the following:
+   
+   - **Comment**: Enter information about the ruleset.
+   - **Mark** **as** **Do** **Not** **Delete**: When you select this, the ruleset cannot be deleted during an update. You can select up to three rulesets and mark them as **Do** **Not** **Delete**.  
+       
+     You can also view the following information (but you cannot modify it):
+   - **Version**: Displays the ruleset version in YYYYMMDD-x format, where YYYY is the year, MM the month, DD the date, and x the ruleset engine version number.
+   - **Active** **On**: Displays the Grid or the name of the Grid member on which the ruleset is currently running. This can be **Grid**, a Grid member name, or **None**. When this displays **None**, the ruleset is not being used.
+   - **Added** **On**: Displays the timestamp when the ruleset was uploaded to the Grid Master in this format: YYYY-MM-DD HH:MM:SS, plus time zone.

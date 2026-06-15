@@ -1,0 +1,27 @@
+---
+title: "Adding NTP Authentication Keys"
+source: "/space/nios90/1449132108"
+pageId: "1449132108"
+---
+To enable authentication between the appliance and the NTP servers, add the authentication keys before enabling the NTP service on the Grid. You can specify authentication keys at the Grid and member levels.  
+To add NTP authentication keys:
+
+1. **Grid:** From the **Infoblox** **Grid** tab, select the **Grid** **Manager** tab, expand the Toolbar and click **NTP** -> **NTP** **Grid** **Config**.  
+   **Member:** From the **Infoblox Grid** tab, select the **Grid** **Manager** tab -> **Members** tab -> *Grid_member* checkbox. Expand the Toolbar and click **NTP** -> **NTP** **Member** **Config**.  
+   To override an inherited property, click **Override** next to it and complete the appropriate fields.
+2. Click the Add icon in the NTP Keys section and enter the following information.
+   
+   - **Key** **Number:** A positive integer that identifies a key.
+   - **Type:** Specifies the key format and the algorithm used to calculate the MAC (message authentication code) of a message.
+     
+     - **MD5** **in** **ASCII** **format** **(M):** The key is a 1-31 character ASCII string using MD5 (Message Digest).
+     - **DES** **in** **hex** **format** **(S):** The key is a 64-bit hexadecimal number in DES (Data Encryption Standard) format. The high order 7 bits of each octet form the 56-bit key, and the low order bit of each octet is given a value so that the octet maintains odd parity. You must specify leading zeros so the key is exactly 16 hexadecimal digits long and maintains odd parity.
+     - **DES** **in** **ASCII** **format** **(A):** The key is a DES key written as a 1-8 character ASCII string.
+     - **DES** **in** **NTP** **format** **(N):** The key is a 64-bit hexadecimal number in NTP format. It is the same as the S format, but the bits in each octet have been rotated one bit right so the parity bit is in the high order bit of the octet. You must specify leading zeros and odd parity must be maintained.
+     - **SHA1 in ASCII format (SHA1):** The key is a 40-character hexadecimal string, and it uses hash based symmetric encryption algorithm.  
+       Note that FIPS compliance is not supported in SHA-1.
+     - **String:** The key data used to calculate the MAC. The format depends on the Key Type you select.
+3. Click **Save** to save the entry and keep the editor open so you can enable the Grid to synchronize its time with external NTP servers.
+
+Note that if you enter a new key, the appliance checks if the key already exists in the key list. If the key exists, but either the key type or key string does not match, the NIOS appliance sends an error message.  
+After you enter an authentication key, you can modify or delete it. Note that you cannot delete a key that an NTP server references. You must first delete all NTP servers that reference that key and then delete the key.

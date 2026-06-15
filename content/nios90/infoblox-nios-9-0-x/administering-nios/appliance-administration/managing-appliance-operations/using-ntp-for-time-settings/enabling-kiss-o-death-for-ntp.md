@@ -1,0 +1,6 @@
+---
+title: "Enabling Kiss-o'-Death for NTP"
+source: "/space/nios90/1449590803"
+pageId: "1449590803"
+---
+When an NTP server denies service to an NTP client, which has exceeded the rate limit, it typically drops the packets without notifying the client. In this case, the client, unaware of the situation, continues to transmit packets. To notify the client so it either slows down or stops the packet transmission, you can enable the NIOS appliance (when acting as an NTP server) to transmit a KoD (Kiss-o'-Death) packet. This packet contains the stratum field which is set to zero, implying the sent packet was invalid, and the ASCII string that contains RATE in the reference identifier field, indicating the status of the transmitted packet and access control. When the client receives the KoD packet, it may reduce transmission rate or stop packet transmission to the server. For more information about KoD, refer to  *RFC*   *5905*  *(Network* *Time* *Protocol* *Version* *4:* *Protocol* *and* *Algorithms* *Specification)*. You can enable KoD at the Grid level and override it at the member level. For more information about enabling KoD, see [Defining NTP Access Control](/nios90/by-id/1449590908/Defining+NTP+Access+Control).

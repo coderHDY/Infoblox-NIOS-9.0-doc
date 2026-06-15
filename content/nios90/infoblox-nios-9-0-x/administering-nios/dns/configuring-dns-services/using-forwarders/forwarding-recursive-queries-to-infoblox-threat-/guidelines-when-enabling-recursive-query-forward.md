@@ -1,0 +1,17 @@
+---
+title: "Guidelines When Enabling Recursive Query Forwarding on a Grid Member"
+source: "/space/nios90/1468629070"
+pageId: "1468629070"
+---
+Note the following when you enable recursive query forwarding on a Grid member:
+
+- Make sure that you enable recursion on the member that you wish to use as a forwarding proxy to Infoblox Threat Defense. For information about how to enable recursion on a Grid member, see* *[*Enabling Recursive Queries*](/nios90/infoblox-nios-9-0-x/administering-nios/dns/configuring-dns-services/enabling-recursive-queries).
+- DNS Forwarding Proxy does not work on systems configured in the IPv6-only mode.
+- When DNS Forwarding Proxy is enabled and delegation zones are defined in the Grid, make sure that you select the **Don't use forwarders to resolve queries in subzones** check box.
+- DNS Forwarding Proxy is not supported on any appliance that is running on a memory lower than 4 GB.
+- Grid member ignores any configured global forwarders and all recursive queries are sent to Infoblox Threat Defense when DNS Forwarding Proxy is running and healthy. If the DNS Forwarding Proxy becomes unhealthy, NIOS will detect this and revert to using local configuration.
+- There might be a significant performance impact on your appliance and network during the DNS Forwarding Proxy installation process depending on the network connectivity between NIOS and Infoblox Threat Defense. Every node will have to install the DNS Forwarding Proxy before serving DNS recursive queries, which includes the HA nodes.
+- When you enable DNS forwarding to Infoblox Threat Defense, the QPS (query per second) throughout might vary, depending on your appliance models and the cache hit ratios. You might see a bigger performance impact when the cache hit ratio is lower.
+- If NIOS has DNSSEC validation enabled, if DNS Forwarding Proxy forwards a query that the Infoblox Threat Defense Cloud redirects rather than blocks, NIOS will cause the query to SERVFAIL. For this reason, if you are running DNS Forwarding Proxy on NIOS and use the redirect action in your security policy in Infoblox Threat Defense Cloud, you must disable DNSSEC validation. Even if you disable DNSSEC validation on/in NIOS, Infoblox Threat Defense Cloud will perform DNSSEC validation on public queries. To enable DNS Forwarding Proxy to work with DNSSEC in case a request was redirected by Infoblox Threat Defense, see* *[*Enabling DNS Forwarding Proxy to Work with DNSSEC*](/nios90/infoblox-nios-9-0-x/administering-nios/dns/configuring-dns-services/using-forwarders/forwarding-recursive-queries-to-infoblox-threat-/enabling-dns-forwarding-proxy-to-work-with-dnsse) below.
+- To bypass recursive query forwarding to Infoblox Threat Defense, you must disable the DNS Forwarding Proxy service.
+- By adding the join token you obtained from the Infoblox Portal Configuration, and by specifying the IP address of the Infoblox Portal in the Custom Resolver field, you can establish connectivity between NIOS and Infoblox Portal Configuration. Thereafter, you can enable the NIOS Grid Connector service in the Infoblox Portal. This capability provides you with a single interface for viewing comprehensive network data such as global IP space, subnets, IP addresses, and DHCP lease data for your Infoblox Cloud infrastructure and NIOS. For more information, see [*Configuring NIOS Grid Connector*](https://docs.infoblox.com/space/BloxOneDDI/186843293/Configuring+NIOS+Grid+Connector)* in the Infoblox Threat Defense* documentation.

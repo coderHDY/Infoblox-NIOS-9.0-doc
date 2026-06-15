@@ -1,0 +1,15 @@
+---
+title: "Overriding the Grid Ruleset"
+source: "/space/nios90/280408810"
+pageId: "280408810"
+---
+You can override the Grid ruleset for individual members. Note that when a member uses a different ruleset than the Grid, it does not receive a ruleset update if the Grid automatically receives the next update. For information about how to activate a ruleset for the Grid, see *[Configuring Grid Security Properties](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280270078)*.  
+To override the Grid ruleset:
+
+1. From the **Data** **Management** tab, select the **Security** tab -> **Members** tab -> *member* checkbox, and then click the Edit icon.
+2. In the *Member* *Security* *Properties* editor, select the **DNS Infrastructure** **Protection** tab -> **Basic** tab, and complete the following:
+   
+   - **Use** **ruleset**: Click this radio button to edit the ruleset. You can inherit or override a ruleset. When you select to use a ruleset, select an active ruleset from the **DNS Infrastructure** **Protection** **Ruleset** **Version** drop-down list.
+   - **Use** **profile**: Click this radio button to edit the DNS Infrastructure Protection profile. Click **Select** **Profile** to select a DNS Infrastructure Protection profile from the *DNS Infrastructure* *Protection* *Profile* *Selector* dialog box. For more information about DNS Infrastructure Protection profiles, see *[Adding DNS Infrastructure Protection Profiles](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280668792)*.
+   - **Active** **Ruleset** **Version**: Click **Override** and select a ruleset from the drop-down list. The appliance activates and applies this ruleset to the member. In the confirmation dialog, click **Yes** and the member switches to the selected ruleset. This field is read-only at the member level.
+   - **Active** **Ruleset** **Comment**: Displays information about the selected ruleset from the **Comment** field. This field is read-only at the member level.

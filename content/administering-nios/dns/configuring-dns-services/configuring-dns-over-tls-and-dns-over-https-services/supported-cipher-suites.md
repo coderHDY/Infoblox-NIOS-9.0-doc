@@ -1,0 +1,33 @@
+---
+title: "Supported Cipher Suites"
+source: "/space/nios90/1420231334"
+pageId: "1420231334"
+---
+DNS over TLS and DNS over HTTPS features support cipher suites that are supported by TLS 1.2 and TLS 1.3. The cipher suite order preference is configured to improve the throughput in DNS over TLS and DNS over HTTPS communication.
+
+Cipher suites supported for TLS 1.2 are as follows:
+
+- ECDHE-ECDSA-CHACHA20-POLY1305
+- ECDHE-RSA-CHACHA20-POLY1305
+- ECDHE-ECDSA-AES128-GCM-SHA256
+- ECDHE-ECDSA-AES256-GCM-SHA384
+- ECDHE-ECDSA-AES128-SHA256
+- ECDHE-ECDSA-AES256-SHA384
+- ECDHE-RSA-AES128-GCM-SHA256
+- ECDHE-RSA-AES256-GCM-SHA384
+- ECDHE-RSA-AES128-SHA256
+- ECDHE-RSA-AES256-SHA384
+- DHE-RSA-AES128-GCM-SHA256
+- DHE-RSA-AES256-GCM-SHA384
+- DHE-RSA-AES128-SHA
+- DHE-RSA-AES256-SHA
+- DHE-RSA-AES128-SHA256
+- DHE-RSA-AES256-SHA384
+
+Cipher suites supported for TLS 1.3 are as follows:
+
+- TLS_CHACHA20_POLY1305_SHA256
+- TLS_AES_128_GCM_SHA256
+- TLS_AES_128_CCM_SHA256
+- TLS_AES_128_CCM_8_SHA256
+- TLS_AES_256_GCM_SHA384

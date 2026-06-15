@@ -1,0 +1,15 @@
+---
+title: "Configuring dnstap to Log DNS Queries and Response Captures"
+source: "/space/nios90/1432813748"
+pageId: "1432813748"
+---
+To configure dnstap to log DNS queries and to capture responses, complete the following:
+
+1. **Grid**: From the **Data** **Management** tab, select the **DNS** tab, expand the **Toolbar,** and then click **Grid** **DNS** **Properties**.  
+   **Member**: From the **Data** **Management** tab, select the **DNS** tab, and then click the **Members** tab -> *member* checkbox -> Edit icon.
+2. In the *Grid* *DNS* *Properties* or *Member* *DNS* *Properties* editor, click **Toggle** **Advanced** **Mode** and then select the **Logging** tab.
+3. Select the **Queries** checkbox to start capturing DNS queries. When you enable this option at the member level, NIOS captures DNS queries for only the selected member.
+4. Select the **Responses** checkbox to start capturing DNS responses. When you enable this option at the member level, NIOS captures DNS responses for only the selected member.
+5. In the **DNSTAP Receiver Address/FQDN** field, enter the IP address or the FQDN from which you want to capture queries or responses. It supports both IPv4 and IPv6 addresses.
+6. In the **DNSTAP Receiver Port field,** enter the port number on which you want to configure the dnstap client system. The default port number is 6000.
+7. Click **Save and Close**.

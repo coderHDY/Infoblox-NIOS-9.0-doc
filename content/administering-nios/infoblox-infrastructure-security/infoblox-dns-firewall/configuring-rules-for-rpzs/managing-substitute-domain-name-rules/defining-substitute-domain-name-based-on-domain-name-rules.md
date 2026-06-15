@@ -1,0 +1,20 @@
+---
+title: "Defining Substitute Domain Name (Based on Domain Name) Rules"
+source: "/space/nios90/1321174865"
+pageId: "1321174865"
+---
+To define substitutes for domain names:
+
+1. From the **Data** **Management** tab, select the **DNS** tab -> **Response** **Policy** **Zones** tab, select *DNS_View* -> *Zone,* and then click **Add** -> select **Substitute** **(Domain** **Name)** **Rule** -> **Substitute** **Domain** **Name** **(Domain** **Name)** **Rule**.   
+   or  
+   From the **Data** **Management** tab, select the **DNS** tab -> **Response** **Policy** **Zones** tab, and then select a zone. Expand the Toolbar, click **Add** -> select **Substitute** **(Domain** **Name)** **Rule** -> **Substitute** **Domain** **Name** **(Domain** **Name)** **Rule**.
+2. The following fields are displayed in the *Add* *a* *Substitute* *(Domain* *Name)* *Rule* wizard:
+   
+   - **Name:** Enter the domain name for which you want to define a substitute. Click **Select** **Zone** to select a different zone.
+   - **DNS** **View:** Displays the DNS view to which the selected RPZ belongs.
+   - **Policy**: Displays the selected policy.
+   - **Substituted** **Name:** Enter an alternative domain name that has to be substituted with the actual domain name. Click **Select** **Zone** to select a different zone.
+   - **Comment**: Optionally, enter additional information.
+   - **Disable**: Clear the checkbox to enable the substitute rule. Select the checkbox to disable it.
+3. Click **Next** to define extensible attributes.
+4. Save the configuration.

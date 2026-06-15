@@ -1,0 +1,450 @@
+---
+title: "operation POP and UNSHIFT"
+source: "/space/nios90/1375568824"
+pageId: "1375568824"
+---
+If the `source` variable is anything but a dictionary, a list, or a composite value, an error is returned. If keys is set, the `source` value is assumed to be a dictionary. Otherwise, an error is returned.
+
+If the `source` variable is a list, a single value is removed from the list. If the operation is POP, it is removed from the right side (from the end). If the operation is UNSHIFT, it is removed from the left (at the beginning). The removed value is put in the `destination` variable.
+
+If the `source` variable is a composite value, the operation is on the children list of the composite value. Note that it is not possible to POP or UNSHIFT from a composite value, if it has text only.
+
+If the `source` variable is a dictionary, the specified `keys` and/or key/value pairs will be removed from the variable in `source`. If only `keys` are passed, those keys will be unconditionally removed. If `keys` and `values` are passed, the key will be removed from the `source` variable only if its value matches what is passed in `values` here. If only one key or key/value pair is passed, the removed value will be put in `destination`. Otherwise, it will simply be dropped.
+
+For the `values` match, the value in the list or dictionary will be serialized with quoting specified in the template before being compared to the string value passed in `values`. This also means that using comparison on large lists would potentially be a slow operation.
+
+In the POP or UNSHIFT case, `type` is validated to be the same as the type of the popped or unshifted variable (you can validate if they were planning to pop a simple scalar if there is one). If it is not, an error will be raised if debug is turned on.
+
+The following are a few examples using namespace L as follows:
+
+`{`
+
+`   'some_list': ['item1', 'item2'],`
+
+`   'some_dict': {'key1': 'val1', 'key2': 'val2'},`
+
+`   'list_of_lists': [['a', 'b'], ['1', '2']],`
+
+`   'list_of_dicts': [{'a': '1'}, {'b': '2'}],`
+
+`   'composite': {`
+
+`     '&lt;xmla&gt;': True,`
+
+`     'index': {'inner_1': 0, 'inner_2': 1},`
+
+`     'name': 'outer',`
+
+`     'attrs': {'outer_attr': 'outer_val'},`
+
+`     'value': [`
+
+`          {`
+
+`              '&lt;xmla&gt;': True,`
+
+`             'index': {},`
+
+`             'name': 'inner_1',`
+
+`             'attrs': {},`
+
+`             'value': ['inner_1_content']`
+
+`         },`
+
+`         {`
+
+`            '&lt;xmla&gt;': True,`
+
+`            'index': {},`
+
+`            'name': 'inner_2',`
+
+`            'attrs': {'inner_attr': 'inner_val'},`
+
+`            'value': []`
+
+`        }`
+
+`      ]`
+
+`   }`
+
+`}`
+
+### **(1) When POP from a list:**
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:some_list",`
+
+`},`
+
+It gives the variable as follows:
+
+`{"some_list": ["item1"]}`
+
+### **(2) When UNSHIFT from a list:**
+
+`{`
+
+`   "operation": "UNSHIFT",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:some_list",`
+
+`}`
+
+It returns the following:
+
+`{"some_list": ["item2"]}`
+
+### **(3) When UNSHIFT from a dict by key**:
+
+`{`
+
+`   "operation": "UNSHIFT",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:some_dict",`
+
+`   "keys": ["key1"]`
+
+`}`
+
+It returns the following:
+
+`{"some_dict": {"key2": "val2"}} There is no difference between POP/UNSHIFT fro dictionarries`
+
+### **(4) When POP from a dict by multiple keys:**
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:some_dict",`
+
+`   "keys": ["key1", "key2"]`
+
+`}`
+
+It returns the following:
+
+`{"some_dict": {}}`
+
+### **(5) When POP from a dict when a key is absent:**
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:some_dict",`
+
+`   "keys": ["key1", "absent_key"]`
+
+`}`
+
+It returns an error in the DEBUG mode. For non-DEBUG mode, all existing keys are POPed. Note that items are popped one by one, so key1 item is popped before the error is returned.
+
+`{"some_dict": {"key2": "val2"}}`
+
+### **(6) When POP from composite value:**
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:composite",`
+
+`}`
+
+It returns the following:
+
+`{`
+
+`   "composite": {`
+
+`     "index": {"inner_1": 0},`
+
+`     "&lt;xmla&gt;": True,`
+
+`     "name": "outer",`
+
+`     "value": [{`
+
+`        "index": {},`
+
+`        "&lt;xmla&gt;": True,`
+
+`        "name": "inner_1",`
+
+`        "value": ["inner_1_content"],`
+
+`        "attrs": {}`
+
+`    }],`
+
+`    "attrs": {"outer_attr": "outer_val"}`
+
+`  }`
+
+`}`
+
+This can be serialized to the following:
+
+`&lt;outer outer_attr="outer_val"&gt;`
+
+`   &lt;inner_1&gt;inner_1_content&lt;inner_1&gt;`
+
+`</outer>`
+
+### **(7) When conditional POP/UNSHIFT from a list:**
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:some_list",`
+
+`   "values": ["item1"]`
+
+`}`
+
+It returns the following:
+
+`{"some_list": ["item2"]}`
+
+There is no difference between POP and UNSHIFT when ‘`values`’ is specified. When source is either **LIST** or **COMPOSITE**, all occurrences of a value are deleted.
+
+### **(8) When conditional POP/UNSHIFT from a dictionary:**
+
+`{`
+
+`   "operation": "UNSHIFT",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:some_dict",`
+
+`   "keys": ["key2"],`
+
+`   "values": ["val2"]`
+
+`}`
+
+It returns the following:
+
+`{"some_dict": {"key1": "val1"}}`
+
+### **(9) When conditional POP/UNSHIFT of multiple values:**
+
+`{`
+
+`   "operation": "UNSHIFT",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:some_dict",`
+
+`   "keys": ["key2", "key2"],`
+
+`   "values": ["abc", "val2"]`
+
+`}`
+
+It returns the following:
+
+`{"some_dict": {"key1": "val1"}}`
+
+### **(10) When conditional POP/UNSHIFT with list values:**
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "SINGLE",`
+
+`   "source": "L:list_of_lists",`
+
+`   "values": ["\"['1', '2']\""]`
+
+`}`
+
+It returns the following:
+
+`{"list_of_lists": [["a", "b"]]}`
+
+For conditional POP/UNSHIFT, non-string values are serialized with the template's `quoting`. For JSON, `quoting` is added to `value`.
+
+### **(11) When conditional POP/UNSHIFT with dictionary value:**
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "DICTIONARY",`
+
+`   "source": "L:list_of_dicts",`
+
+`   "values": ["\"{'b': '2'}\""]`
+
+`}`
+
+It returns the following:
+
+`{"list_of_dicts": [{"a": "1"}]}`
+
+### **(12a) When conditional POP/UNSHIFT with the following composite values:**
+
+{
+
+`   "operation": "POP",`
+
+`   "type": "COMPOSITE",`
+
+`   "source": "L:composite",`
+
+`   "values": ["\"{'index': {}, '&lt;xmla&gt;': True, 'name': 'inner_2', 'value': [],`
+
+`   'attrs': {'inner_attr': 'inner_val'}}\""]`
+
+`}`
+
+It returns the following:
+
+`{`
+
+`   "composite": {`
+
+`     "index": {"inner_1": 0},`
+
+`     "&lt;xmla&gt;": True,`
+
+`     "name": "outer",`
+
+`     "value": [{`
+
+`       "index": {},`
+
+`       "&lt;xmla&gt;": True,`
+
+`       "name": "inner_1",`
+
+`       "value": ["inner_1_content"],`
+
+`       "attrs": {}`
+
+`     }],`
+
+`    "attrs": {"outer_attr": "outer_val"}`
+
+`  }`
+
+`}`
+
+### **(12b) When conditional POP/UNSHIFT with the following composite values, and with the template quoting set to XMLA:**
+
+The example in (12a) can be specified as follows:
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "COMPOSITE",`
+
+`   "source": "L:composite",`
+
+`   "values": ["&lt;inner_2 inner_attr=\"inner_val\"/&gt;"]`
+
+`}`
+
+Type check after POP/UNSHIFT:
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "LIST",`
+
+`   "source": "L:some_dict",`
+
+`   "keys": ["key2"]`
+
+`}`
+
+It returns an error in the DEBUG mode. Since the type of POPed value is not **LIST**, the possible values for type are '**SINGLE**', '**LIST**', '**DICTIONARY**', and '**COMPOSITE**', where '**SINGLE**' means ‘no check’. Note that type check is done after the item is retrieved from `source`. In the **DICTIONARY** case, when several keys are specified, there is no type check. Type check is done after value comparison.
+
+### **(13) When putting the item to ‘destination’:**
+
+`{`
+
+`   "operation": "POP",`
+
+`   "type": "COMPOSITE",`
+
+`   "source": "L:composite",`
+
+`   "destination": "L:sub_item"`
+
+`}`
+
+It returns the following:
+
+`{`
+
+`   "composite": {`
+
+`      "index": {"inner_1": 0},`
+
+`      "&lt;xmla&gt;": True,`
+
+`      "name": "outer",`
+
+`      "value": [`
+
+`        {"index": {}, "&lt;xmla&gt;": True, "name": "inner_1", "value": ["inner_1_content"],`
+
+`   "attrs": {}}`
+
+`      ],`
+
+`      "attrs": {"outer_attr": "outer_val"}`
+
+`      },`
+
+`    "sub_item": {`
+
+`      "index": {},`
+
+`      "&lt;xmla&gt;": True,`
+
+`      "name": "inner_2",`
+
+`      "value": [],`
+
+`      "attrs": {"inner_attr": "inner_val"}`
+
+`   }`
+
+`}`
+
+If the value popped/unshifted from source and destination is specified, the value is written to the destination. The value is written after the type check.
+
+The L:sub_item can be serialized as the following:
+
+`&lt;inner_2 inner_attr="inner_val"/&gt;`
