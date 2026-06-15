@@ -1,0 +1,9 @@
+---
+title: "About IPv4 Network Templates"
+source: "/space/nios90/1394541229"
+pageId: "1394541229"
+---
+You can create IPv4 network templates to facilitate network configuration. You can use network templates to create networks in any network view. When you create a network template, you do not specify a network address. You enter the network address when you create an actual network from the template. You can specify a netmask or allow the user to define the netmask when they create the actual network.  
+A network template is useful for setting up a network with fixed addresses and DHCP ranges already defined. You can add DHCP range or fixed address/reservation templates to a network template. Once the fixed address and DHCP range information is set up, the network template contains a range template list and a fixed address/reservation template list.  
+When you enable support for RIR updates, you can create IPv4 network templates specific for RIR associated networks. For information about RIR updates, see [*RIR Registration Updates*](/nios90/infoblox-nios-9-0-x/administering-nios/appliance-administration/rir-registration-updates).  
+If you have deployed the Cloud Network Automation on the Grid Master, you can configure network templates for cloud delegation. When you select a default Cloud Platform Appliance for a template, all networks you create using this template will delegate authority to the same Cloud member. If you want to associate any range or fixed address templates with a network template, ensure that you enable "**User** **for** **cloud** **delegation**" for the network, range, and fixed address templates. Note that when a Cloud member is removed from the Grid, the delegation will also be removed from the template. For information about Cloud Network Automation, see [*Deploying Cloud Network Automation*](/nios90/infoblox-nios-9-0-x/administering-nios/appliance-administration/deploying-cloud-network-automation).

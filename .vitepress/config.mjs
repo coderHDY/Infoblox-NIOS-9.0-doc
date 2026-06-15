@@ -49,8 +49,6 @@ function shortRollupName(name, max = 150) {
   return sanitized.length <= max ? sanitized : sanitized.slice(0, max);
 }
 
-let isSsrBuild = false;
-
 export default {
   title: "Infoblox NIOS 9.0",
   description: "Infoblox NIOS 9.0 本地文档镜像",
@@ -62,28 +60,27 @@ export default {
     plugins: [
       {
         name: "vitepress-short-filenames",
-        apply: "build",
-        configResolved(config) {
-          isSsrBuild = !!config.build.ssr;
+        enforce: "post",
+        configResolved(resolved) {
+          // 避免 Vite emptyOutDir 在大量 SSR 临时文件时触发 ENOTEMPTY（Vercel CI 常见）
+          if (resolved.build.ssr) {
+            resolved.build.emptyOutDir = false;
+          }
+          const output = resolved.build.rollupOptions.output;
+          if (!output || Array.isArray(output)) return;
+          if (!resolved.build.ssr) {
+            output.entryFileNames = (chunk) =>
+              `assets/${shortRollupName(chunk.name)}.[hash].js`;
+            output.chunkFileNames = (chunk) =>
+              /(?:Carbon|BuySell)Ads/.test(chunk.name)
+                ? `assets/chunks/ui-custom.[hash].js`
+                : `assets/chunks/${shortRollupName(chunk.name)}.[hash].js`;
+          }
+          output.assetFileNames = (asset) =>
+            `assets/${shortRollupName(asset.name)}.[hash][extname]`;
         },
       },
     ],
-    build: {
-      rollupOptions: {
-        output: {
-          entryFileNames: (chunk) =>
-            isSsrBuild
-              ? "[name].js"
-              : `assets/${shortRollupName(chunk.name)}.[hash].js`,
-          chunkFileNames: (chunk) =>
-            isSsrBuild
-              ? `${shortRollupName(chunk.name)}.[hash].js`
-              : `assets/chunks/${shortRollupName(chunk.name)}.[hash].js`,
-          assetFileNames: (asset) =>
-            `assets/${shortRollupName(asset.name)}.[hash][extname]`,
-        },
-      },
-    },
   },
   themeConfig: {
     nav: [{ text: "NIOS 9.0", link: "/nios90/" }],

@@ -310,7 +310,7 @@ async function main() {
 
         const attachments = await fetchPageAttachments(page, BASE, entry.id);
         const attIdx = attachmentIndex(attachments);
-        const assetMap = await downloadAttachments(request, attachments, entry.id, publicDir);
+        const assetMap = await downloadAttachments(request, attachments, entry.id, publicDir, BASE);
         imagesSaved += Object.keys(assetMap).length;
 
         await fs.writeFile(path.join(rawDir, `${entry.id}.json`), JSON.stringify({ ...body, attachments }, null, 2));

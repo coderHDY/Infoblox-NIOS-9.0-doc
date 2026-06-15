@@ -32,16 +32,18 @@ function extFromAttachment(att) {
   return IMAGE_EXT.has(ext) ? ext : ".png";
 }
 
-export async function downloadAttachments(request, attachments, pageId, publicRoot) {
+export async function downloadAttachments(request, attachments, pageId, publicRoot, base = "https://docs.infoblox.com") {
   const assetMap = {};
   const dir = path.join(publicRoot, "assets", pageId);
   await fs.mkdir(dir, { recursive: true });
 
   for (const att of attachments) {
-    const link = att.downloadLink;
+    let link = att.downloadLink;
     if (!link) continue;
+    if (link.startsWith("/")) link = base + link;
+
     const ext = extFromAttachment(att);
-    const fileName = `${att.fileId ?? att.id ?? att.title}${ext}`;
+    const fileName = `${att.fileId ?? att.id ?? att.title}${ext}`.replace(/[/\\]/g, "_");
     const dest = path.join(dir, fileName);
     const webPath = `/assets/${pageId}/${fileName}`;
 
@@ -53,6 +55,7 @@ export async function downloadAttachments(request, attachments, pageId, publicRo
       }
       if (att.fileId) assetMap[att.fileId] = webPath;
       assetMap[link] = webPath;
+      if (att.downloadLink) assetMap[att.downloadLink] = webPath;
     } catch {
       /* skip failed image */
     }

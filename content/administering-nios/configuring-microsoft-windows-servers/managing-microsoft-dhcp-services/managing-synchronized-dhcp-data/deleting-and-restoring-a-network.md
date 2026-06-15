@@ -1,6 +1,0 @@
----
-title: "Deleting and Restoring a Network"
-source: "/space/nios90/1467023485"
-pageId: "1467023485"
----
-When you delete a network, Grid Manager moves it and its DHCP ranges and fixed addresses to the Recycle Bin, and permanently deletes its leases. The corresponding scopes and reservations are deleted from the Microsoft server at the next synchronization. If you restore the network on Grid Manager, its DHCP ranges and fixed addresses are restored as well. The Grid member then adds the corresponding scopes and reservations to the Microsoft server on the next synchronization. For information about deleting networks, see [*Configuring IPv4 Networks*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280761742). For information about restoring data, see [*Using the Recycle Bin*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280401588).

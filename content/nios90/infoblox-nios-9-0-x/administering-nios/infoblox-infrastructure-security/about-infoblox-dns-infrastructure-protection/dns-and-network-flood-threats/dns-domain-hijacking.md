@@ -1,0 +1,7 @@
+---
+title: "DNS Domain Hijacking"
+source: "/space/nios90/280408676"
+pageId: "280408676"
+---
+Domain hijacking or domain theft is the act of changing the registration of a domain name without the permission of its original registrant. Domain hijacking is generally done by exploiting a vulnerability in the domain name registration system or through social engineering. In some cases however, domain hijackers alter the DNS data of a domain after gaining control of it. They consequently redirect users to a fraudulent site, instead of the legitimate site, on the Internet.  
+To protect your authoritative DNS server against DNS domain hijacking, you can configure the appliance to monitor NS records and glue records of top-level authoritative zones. Based on your configuration, the appliance periodically checks DNS data in the NS RRsets for these zones and compares the data with that in the appliance database. It then reports any data discrepancies through SNMP traps and logs related events in the syslog. You can also monitor the status of DNS data discrepancies, if any, through the DNS integrity check widget, see *[Status Dashboard](/nios90/infoblox-nios-9-0-x/using-the-grid-manager-interface/dashboards/tasks-dashboard/status-dashboard)*.  The severity in data discrepancies can help identify possible domain hijacking. For more information about how to configure this feature, see *[Configuring DNS Integrity Check for Authoritative Zones](/nios90/infoblox-nios-9-0-x/administering-nios/dns/configuring-dns-zones/configuring-dns-integrity-check-for-authoritativ)*.

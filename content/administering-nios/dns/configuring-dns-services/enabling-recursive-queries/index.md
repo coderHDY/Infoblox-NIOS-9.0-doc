@@ -1,8 +1,0 @@
----
-title: "Enabling Recursive Queries"
-source: "/space/nios90/280665882"
-pageId: "280665882"
----
-You can enable the appliance to respond to recursive queries and create a list of allowed networks, IP addresses, and remote servers that present specified TSIG (transaction signature) keys. When using TSIG keys, it is important that the appliances and servers involved with the authentication procedure use NTP (Network Time Protocol) for their time settings (see [*Using NTP for Time Settings*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/319488612)).  
-A recursive query requires the appliance to return requested DNS data, or locate the data through queries to other servers. When a NIOS appliance receives a query for DNS data it does not have and you have enabled recursive queries, it first sends a query to any specified forwarders. If a forwarder does not respond (and you have disabled the **Use** **Forwarders** **Only** option in the **Forwarders** tab of the *Member* *DNS* *Properties* editor), the appliance sends a non-recursive query to specified internal root servers. If no internal root servers are configured, the appliance sends a non-recursive query to the Internet root servers. For information on specifying root name servers, see* *[*About Root Name Servers*](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280405807)*.*  
-You can enable recursion for a Grid, individual Grid members, and DNS views. For information about enabling recursion in a DNS view, see [Configuring DNS Views](https://infoblox-docs.atlassian.net/wiki/spaces/nios90/pages/280665456). If you do not enable recursion, the appliance denies recursive queries from all clients.

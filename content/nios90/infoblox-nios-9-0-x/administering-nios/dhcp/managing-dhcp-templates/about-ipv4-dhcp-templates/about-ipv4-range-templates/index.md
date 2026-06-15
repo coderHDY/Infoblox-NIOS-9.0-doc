@@ -1,0 +1,7 @@
+---
+title: "About IPv4 Range Templates"
+source: "/space/nios90/1393558852"
+pageId: "1393558852"
+---
+When you create an IPv4 range template, the start and end address fields are based on the specified offset from the network start address and the number of IP addresses in the range. After you create a DHCP range template, you can configure additional properties such as exclusion ranges and DHCP filters, as described in [*Modifying IPv4 Range Templates*](/nios90/infoblox-nios-9-0-x/administering-nios/dhcp/managing-dhcp-templates/about-ipv4-dhcp-templates/about-ipv4-range-templates/modifying-ipv4-range-templates). Then when you use the template to create a DHCP range, the range inherits the properties of the template. You can also include a DHCP range template in a network template to automatically create a DHCP range when you use that network template.  
+If you have deployed the Cloud Network Automation license on the Grid Master, you can configure range templates for cloud delegation. When you select a default Cloud Platform Appliance for a template, all ranges you create using this template will delegate authority to the same Cloud member. Note that when a Cloud member is removed from the Grid, the delegation will also be removed from the template. For information about Cloud Network Automation, see [*Deploying Cloud Network Automation*](/nios90/infoblox-nios-9-0-x/administering-nios/appliance-administration/deploying-cloud-network-automation).

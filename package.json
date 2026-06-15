@@ -7,9 +7,10 @@
     "crawl:full": "node scripts/crawl.mjs --full-space --space nios90",
     "crawl:retry": "node scripts/crawl.mjs --retry-missing && node scripts/write-stubs.mjs",
     "fix-links": "node scripts/fix-links.mjs",
+    "localize-images": "node scripts/localize-images.mjs",
     "sanitize": "node scripts/sanitize-md.mjs",
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "node scripts/prebuild.mjs && vitepress build",
     "preview": "vitepress preview"
   },
   "devDependencies": {
