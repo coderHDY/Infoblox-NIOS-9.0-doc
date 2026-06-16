@@ -4,23 +4,32 @@ title: 学习指南
 
 # 学习指南
 
-本站点镜像了 Infoblox 官方 NIOS 9.0.x 文档。若你是该领域新手，**不建议从完整文档树逐页阅读**——章节多、体量大，更适合按任务查阅。
+本站点除 **Infoblox 官方文档镜像**外，还提供 **零基础自学教程**。
 
-这里的 **Quick Study** 系列按「先建立概念 → 再进操作手册」整理学习顺序，并在关键处附上内链，方便一键跳到对应章节。
+## 推荐入口
 
-## 可用路线
-
-| 路线 | 说明 |
+| 你是… | 从这里开始 |
 | --- | --- |
-| [Administering NIOS Quick Study](/learn/administering-nios/) | 管理员操作手册入门：Grid、IPAM、DNS、DHCP 等 |
+| 完全没接触过 NIOS / DDI | [Administering NIOS 入门教程](/learn/administering-nios/) |
+| 已有基础，只想查官方原文 | 侧栏 **Infoblox NIOS 9.0.x** |
 
-## 使用建议
+## Administering NIOS 入门教程（8 课）
 
-1. **按阶段读**，不要按侧栏字母顺序硬啃。
-2. 遇到术语先查 [Glossary of Terms](/nios90/infoblox-nios-9-0-x/getting-started/glossary-of-terms)。
-3. 需要查细节时，展开侧栏 **Infoblox NIOS 9.0.x → Administering NIOS**，或用右上角搜索。
-4. 有 Grid Manager 实验环境时，每读完一小节就在界面里点一遍，效果最好。
+不是链接目录，而是**由浅入深**的讲解：白话 + 类比 + 小例子 + 自测，每课末尾再链到官方章节。
 
-## 文档 vs 源站
+1. [网络三件宝：IP、DNS、DHCP](/learn/administering-nios/01-network-basics/)
+2. [NIOS 与 Grid](/learn/administering-nios/02-nios-and-grid/)
+3. [平台与权限](/learn/administering-nios/03-appliance-administration/)
+4. [IP 地址管理（IPAM）](/learn/administering-nios/04-ipam/)
+5. [DNS 配置](/learn/administering-nios/05-dns/)
+6. [DHCP 配置](/learn/administering-nios/06-dhcp/)
+7. [综合实战](/learn/administering-nios/07-putting-it-together/)
+8. [进阶选读](/learn/administering-nios/08-advanced-topics/)
 
-源站进入某一章后，侧栏只显示该章子树；本地站点侧栏展示整个 space。**Administering NIOS 的正文与源站一致**，只是本地还包含 What's New、CLI 等其他章节。
+预计 **1–2 周**（每天 1–2 小时）可完成第 1–7 课核心内容。
+
+## 使用提示
+
+- 教程与官方文档**不矛盾**：先读教程建立地图，再按需点官方链接看操作细节。  
+- 右上角 **Local Search** 可搜全站（教程 + 官方正文）。  
+- 有 Grid Manager 实验环境时，每课后对照界面点一遍，效果最好。

@@ -54,8 +54,19 @@ function buildSidebar() {
       items: [
         { text: "学习路线总览", link: "/learn/" },
         {
-          text: "Administering NIOS Quick Study",
-          link: "/learn/administering-nios/",
+          text: "Administering NIOS 入门教程",
+          collapsed: false,
+          items: [
+            { text: "教程首页", link: "/learn/administering-nios/" },
+            { text: "第 1 课 · 网络三件宝", link: "/learn/administering-nios/01-network-basics" },
+            { text: "第 2 课 · NIOS 与 Grid", link: "/learn/administering-nios/02-nios-and-grid" },
+            { text: "第 3 课 · 平台与权限", link: "/learn/administering-nios/03-appliance-administration" },
+            { text: "第 4 课 · IPAM", link: "/learn/administering-nios/04-ipam" },
+            { text: "第 5 课 · DNS", link: "/learn/administering-nios/05-dns" },
+            { text: "第 6 课 · DHCP", link: "/learn/administering-nios/06-dhcp" },
+            { text: "第 7 课 · 综合实战", link: "/learn/administering-nios/07-putting-it-together" },
+            { text: "第 8 课 · 进阶选读", link: "/learn/administering-nios/08-advanced-topics" },
+          ],
         },
       ],
     },
