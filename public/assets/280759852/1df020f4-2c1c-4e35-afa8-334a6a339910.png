@@ -1,0 +1,58 @@
+<mxfile host="ac.draw.io" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.6">
+  <diagram id="r6D9Vw8uUiOnmO3fgmXU" name="Page-1">
+    <mxGraphModel dx="1689" dy="969" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#636363,#959595);" vertex="1" parent="1">
+          <mxGeometry x="6" y="7" width="360" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-2" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;textShadow=1;shadow=1;strokeColor=light-dark(#729CFD,#EDEDED);" vertex="1" parent="1">
+          <mxGeometry x="20" y="148" width="330" height="229" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-3" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;entryX=0.182;entryY=0.831;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="WfsZ0-Jg2UAgNlku63hO-12" target="WfsZ0-Jg2UAgNlku63hO-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="355" y="43.07672104915298" as="sourcePoint" />
+            <mxPoint x="120" y="108" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-4" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;entryX=0.897;entryY=0.792;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="WfsZ0-Jg2UAgNlku63hO-13" target="WfsZ0-Jg2UAgNlku63hO-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="7" as="sourcePoint" />
+            <mxPoint x="230" y="108" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-5" value="" style="endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="271" as="sourcePoint" />
+            <mxPoint x="110" y="308" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-6" value="&lt;span style=&quot;font-family: helvetica; font-style: normal; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline; float: none; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font&gt;&lt;b&gt;NIOS&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" style="text;html=1;fontSize=12;align=center;fontColor=light-dark(#729CFD,#EDEDED);" vertex="1" parent="1">
+          <mxGeometry x="160" y="146" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-7" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;gradientColor=#DBF9FF;strokeColor=light-dark(#36e4f5, #ededed);shadow=1;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="90" y="7" width="165" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-8" value="Infoblox Threat Defense Cloud Client" style="whiteSpace=wrap;html=1;direction=south;fillColor=light-dark(#FFFFFF,#392F3F);strokeColor=light-dark(#1db14c, #392F3F);rounded=1;gradientColor=light-dark(#CCFFCC,#EDEDED);shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="225.5" width="120" height="54.5" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-9" value="Infoblox Threat Defense Cloud" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="122.5" y="57" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-10" value="Outbound" style="whiteSpace=wrap;html=1;direction=south;fillColor=light-dark(#FFFFFF,#392F3F);strokeColor=light-dark(#1db14c, #392F3F);rounded=1;gradientColor=light-dark(#CCFFCC,#EDEDED);shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="308" width="120" height="54.5" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-11" value="Threat Insight in Infoblox Threat Defense Cloud Client" style="whiteSpace=wrap;html=1;direction=south;fillColor=light-dark(#FFFFFF,#392F3F);strokeColor=light-dark(#1db14c, #392F3F);rounded=1;gradientColor=light-dark(#CCFFCC,#EDEDED);shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="198.68" y="225.5" width="120" height="54.5" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-12" value="Cloud API Interface" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#7198fc, #ededed);fillColor=light-dark(#becff9, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="50.00000000000006" y="179" width="118.68" height="49.5" as="geometry" />
+        </mxCell>
+        <mxCell id="WfsZ0-Jg2UAgNlku63hO-13" value="Cloud API Interface" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#7198fc, #ededed);fillColor=light-dark(#becff9, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="200.00000000000006" y="179" width="118.68" height="49.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -63,4 +63,4 @@ To view the last updated RPZs:
 
 *Last* *Updated* *RPZ*
 
-*[image: media]*
+![image](/assets/280269642/6c86755e-0cb3-4675-be6e-1409651ea5ca.png)

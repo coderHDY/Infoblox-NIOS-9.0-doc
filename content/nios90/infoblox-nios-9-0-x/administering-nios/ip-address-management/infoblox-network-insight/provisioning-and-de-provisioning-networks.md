@@ -78,13 +78,13 @@ If you are deleting a network from the main IPAM page, any devices that have end
 5. Click the **Next** **Page** and **Last** **Page** icons to locate the network that you wish to de-provision.
 6. Click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280273160/a77a41ad-3ba4-4a24-bb6d-f24aad8f643a.png)
    
    next to the network you want (this automatically selects it) and select **De-Provision** **Network**. The dialog box appears, listing the device name, the device's IP address, the interface to which the network is currently bound, and the network's endpoint IP address on the current device.
    
    *De-Provisioning* *a* *Network* *from* *a* Device
    
-   *[image: media]*
+   ![image](/assets/280273160/f8bc9e5a-2047-4f66-96dc-c52231be22b9.png)
 7. Click **Yes** to confirm the de-provisioning action.
 
 > **warning**

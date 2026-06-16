@@ -64,6 +64,6 @@ To delete a VLAN range:
 
 The following example illustrates how VLAN objects are categorized when you delete a VLAN range.
 
-*[image: media]*
+![image](/assets/280791376/88ff24f4-9900-435d-8c95-5ce587fb62c5.png)
 
 This example illustrates 3 VLAN ranges that allow overlapping VLAN IDs. If you try to delete VLAN Range 3, NIOS displays an error message because the child VLAN objects VLAN 40 and VLAN 41 can either be categorized under VLAN Range 1 or VLAN Range 2, and the VLAN Range 3 is not deleted. In this scenario, you must manually change the parent of the VLAN objects.

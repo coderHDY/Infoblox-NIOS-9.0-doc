@@ -10,7 +10,7 @@ To delete a super host:
 1. From the **Data Management** tab, select the **Super Host** tab.
 2. Select a super host that you want to delete and click the Delete icon, or click the Action icon
    
-   *[image: media]*
+   ![image](/assets/1468465274/a603bdd3-6182-4bc4-ae6c-353ccc33abbc.png)
    
    next to the respective super host and select **Delete** from the menu.
 3. The appliance displays the *Delete Confirmation* dialog box to confirm that you want to delete a super host. You can choose to delete the records that are associated with the super host by selecting the **Delete associated records with the Superhost **checkbox. You cannot delete associated records if you do not have write permissions on those objects. When you restore this super host from the Recycle Bin, the associated resource records are also restored.  

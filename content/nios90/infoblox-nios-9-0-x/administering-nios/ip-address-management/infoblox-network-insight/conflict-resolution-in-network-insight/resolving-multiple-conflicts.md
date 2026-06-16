@@ -12,13 +12,13 @@ To resolve multiple conflicts for a particular IP address, use a Resolve Multipl
 4. If multiple issues are involved with the conflict entry, the Resolve Conflicts wizard lists each of them as shown in the below figure.   
    *Resolution of Multiple Conflicts*
    
-   *[image: media]*
+   ![image](/assets/1432785704/9e08ef28-112c-4063-bd6a-1c5caac529ab.png)
    
    
 5. Select the conflict that you want to resolve first and click Next. For example, consider choosing to resolve the MAC Address conflict as shown in above figure. The second step of the wizard appears, listing the differences between the Existing and Discovered information for the conflict as shown in the figure below.  
     *Troubleshooting* *the* *first* *selected* *conflict*
    
-   *[image: media]*
+   ![image](/assets/1432785704/35815144-a243-401c-bf26-bb958e2885f7.png)
    
    
    
@@ -31,7 +31,7 @@ To resolve multiple conflicts for a particular IP address, use a Resolve Multipl
 7. The wizard updates with a return to the first step, in which you select the next conflict to resolve. A banner shows the result of the first resolution.
 8. Select the next conflict to resolve and click **Next**. As an example, the below figure shows a device configuration conflict.  
    *Device* *Information* *conflict* *for* *an* *object*
-9. *[image: media]*
+9. ![image](/assets/1432785704/7656cea2-4463-40b3-9611-ab9e69b7abe1.png)
    
    1. To resolve the conflict, the Configured information must be overwritten with the Discovered information. Choose any of the following:
       

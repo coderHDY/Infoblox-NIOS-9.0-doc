@@ -16,7 +16,7 @@ For all of these object types, you can click a **Schedule** **for** **Later** bu
 
 *Create* *Network* *Schedule* *for* *Later* *page*
 
-*[image: media]*
+![Create Network Schedule for Later page](/assets/504168883/fe0d8695-6200-4969-8c58-ec5529298ddf.png)
 
 1. To create the new object immediately, select **Now** and click **Save** **&** **Close**.
 2. You can choose to have Grid Manager create the object at a later time. To do so, select **Later**. Choose a **Selected** **time** by entering or selecting a **Start** **Date** (click the calendar icon to choose a calendar date) and a **Start** **Time** (click the clock icon to choose a specific time in fifteen minute increments), and choose a **Time** **Zone**.
@@ -25,7 +25,7 @@ When you step through the entire Wizard process (without clicking **Schedule** *
 
 *Scheduling* *Create* *Object* *and* *Port* *Configuration*
 
-*[image: media]*
+![Scheduling Create Object and Port Configuration](/assets/504168883/9293915b-1e48-4ab1-8cf9-02737f8147e0.png)
 
 
 

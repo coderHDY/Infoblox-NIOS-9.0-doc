@@ -3,7 +3,7 @@ title: "Converting Unmanaged Devices to Managed Devices"
 source: "/space/nios90/1432753454"
 pageId: "1432753454"
 ---
-*[image: media]*
+![image](/assets/1432753454/d7e8fc31-e119-48f0-b1fc-15b7b1a13971.png)
 
 > **warning**
 >

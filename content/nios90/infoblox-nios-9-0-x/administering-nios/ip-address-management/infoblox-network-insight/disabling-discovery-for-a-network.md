@@ -12,7 +12,7 @@ To disable discovery for an IP network:
    2. **Data** **Management** **–&gt;** **DHCP** **–&gt;** **Networks**
 2. Click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280273243/a2e513b4-1d18-41a5-b914-7ecf8af7acb1.png)
    
    next to the network you want (this automatically selects it) and select **Edit** from the menu. The Network editor appears.
 3. Click the **Discovery** tab.

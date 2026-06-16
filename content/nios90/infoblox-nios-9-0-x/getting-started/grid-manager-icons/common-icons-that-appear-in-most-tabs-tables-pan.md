@@ -7,7 +7,7 @@ The following are common icons that appear in most of the tabs, tables, panels, 
 
 | **Icon** | **Icon** **Name** | **Description** |
 | --- | --- | --- |
-| *[image: media]* | Active User | Indicates a user is active on the Microsoft server |
+| ![Active User](/assets/1311769454/60b81f8c-b4c6-4e08-9ea4-4a842bafcf4e.png) | Active User | Indicates a user is active on the Microsoft server |
 |    | Add | Adds an object |
 |    | Add Bookmark | Adds a bookmark for an object and displays it in the Bookmarks panel |
 |    | Arrow (Down) | Moves an object down in a list |
@@ -38,7 +38,7 @@ The following are common icons that appear in most of the tabs, tables, panels, 
 |    | Search Head | Indicates that the reporting member functions as a search head |
 |    | Start | Starts a process |
 |    | Stop | Stops a process |
-| *[image: media]* | Unlocked | Indicates an unlocked object |
+| ![Unlocked](/assets/1311769454/f184094c-a2e8-4319-a65f-802d0a59296f.png) | Unlocked | Indicates an unlocked object |
 |    | User | Indicates a user has logged out of the Microsoft server |
 |    | User Profile | Configures a user profile |
 |    | View | Lists data in the current panel or lists detailed status about an object |

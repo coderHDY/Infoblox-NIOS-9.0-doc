@@ -87,20 +87,22 @@ admini-doc/
 
 ### Phase 1 — 验证爬取 ✅
 
-### Phase 2 — 全量 🔄
+### Phase 2 — 全量 ✅
 
-**范围**：整个 `nios90` space（约 2648 页）+ space 首页下同级页 + 图片本地化 + 内链修复。
+**范围**：整个 `nios90` space（2648 页）+ space 首页下同级页 + 图片本地化 + 内链修复。
 
-- [x] `--full-space` 从 space homepage 拉全量目录
-- [x] 图片下载至 `public/assets/{pageId}/`
-- [x] 内链修复（Atlassian / docs.infoblox.com / 错误相对路径）
-- [x] 路径过长时 fallback 至 `nios90/by-id/{pageId}.md`
-- [ ] 全量爬取执行中（见 `crawl-full.log`）
-- [ ] 爬取完成后 `pnpm fix-links`
-- [ ] VitePress 全量验证
+- [x] `--full-space` 从 space homepage 拉全量目录（2648/2648 页）
+- [x] 删除旧 Phase 1 目录 `content/administering-nios/`
+- [x] 图片下载至 `public/assets/{pageId}/`（316 页、1558 文件）
+- [x] 修复 `adf-to-md.mjs` 中 `findMedia` 仅匹配 `url` 的 bug
+- [x] `pnpm refresh-md` 刷新含图 Markdown（66 页含 `![…]`）
+- [x] 内链修复（爬取时已重写；`fix-links` updated 0）
+- [x] VitePress `pnpm build` 验证通过（`content/public` → `../public` 符号链接）
 
 ```bash
 pnpm crawl:full     # 全量爬取
+pnpm localize-images # 下载附件并刷新 md
+pnpm refresh-md     # 仅从 raw 重生成 md（无需浏览器）
 pnpm fix-links      # 批量修复内链
 pnpm dev
 ```
@@ -115,7 +117,10 @@ pnpm dev
 | 2026-06-15 | 创建 `todo.md` | 记录方案，待实现脚本 |
 | 2026-06-15 | 添加 `scripts/crawl.mjs`、`adf-to-md.mjs`、VitePress 配置 | 完成 |
 | 2026-06-15 | 验证爬取 Administering NIOS 子树 | 1878/1894 页成功，16 页 API 404/网络失败 |
-| 2026-06-15 | VitePress `pnpm dev` 可浏览；`build` 因路径过长暂失败 | 待缩短 slug 或扁平化 id |
+| 2026-06-15 | Phase 2 全量爬取 | 2648/2648 页；manifest 更新 |
+| 2026-06-15 | 图片本地化 | 316 页附件、1558 文件；修复 findMedia bug |
+| 2026-06-15 | `refresh-md` | 70 个 md 更新，66 页含图片引用 |
+| 2026-06-15 | `pnpm build` | 240s 成功；需 `content/public` 符号链接 |
 
 ---
 

@@ -83,7 +83,7 @@ export default {
     ],
   },
   themeConfig: {
-    nav: [{ text: "NIOS 9.0", link: "/nios90/" }],
+    nav: [{ text: "NIOS 9.0", link: "/nios90/infoblox-nios-9-0-x/" }],
     sidebar: buildSidebar(),
     search: { provider: "local" },
   },

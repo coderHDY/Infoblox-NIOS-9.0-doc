@@ -7,7 +7,7 @@ Some of the NIOS appliances have an LCD and navigation buttons on the front pane
 
 *Infoblox* *LCD* *and* *Navigation* *Buttons*
 
-*[image: media]*
+![Infoblox LCD and Navigation Buttons](/assets/1330774706/62cd763c-451d-470d-85cd-392aa8c28936.png)
 
 You can deploy a single independent NIOS appliance by setting its LAN1 port IP address, netmask, and gateway through the LCD. This is the simplest method because you do not need anything other than a physical access to the appliance to complete the initial configuration.
 

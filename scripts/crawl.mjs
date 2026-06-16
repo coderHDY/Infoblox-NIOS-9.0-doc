@@ -216,9 +216,8 @@ async function main() {
   else console.log(`\n📥 子树爬取: root=${args.root} space=${args.space}`);
 
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext();
+  const context = await browser.newContext({ acceptDownloads: true });
   const page = await context.newPage();
-  const request = context.request;
 
   try {
     let manifest;
@@ -310,7 +309,7 @@ async function main() {
 
         const attachments = await fetchPageAttachments(page, BASE, entry.id);
         const attIdx = attachmentIndex(attachments);
-        const assetMap = await downloadAttachments(request, attachments, entry.id, publicDir, BASE);
+        const assetMap = await downloadAttachments(page, attachments, entry.id, publicDir, BASE);
         imagesSaved += Object.keys(assetMap).length;
 
         await fs.writeFile(path.join(rawDir, `${entry.id}.json`), JSON.stringify({ ...body, attachments }, null, 2));

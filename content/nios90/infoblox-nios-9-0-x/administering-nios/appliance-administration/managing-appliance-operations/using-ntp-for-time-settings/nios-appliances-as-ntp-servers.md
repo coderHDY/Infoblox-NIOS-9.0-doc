@@ -7,7 +7,7 @@ After you enable NTP on a Grid, the Grid members—including the Grid Master—c
 
 *Grid* *Members* *as* *NTP* *Servers*
 
-*[image: media]*
+![image](/assets/1449263248/fdac241f-7bd0-42e6-b7e6-533e1b73428b.png)
 
 To configure a NIOS appliance as an NTP server, perform the following tasks:
 

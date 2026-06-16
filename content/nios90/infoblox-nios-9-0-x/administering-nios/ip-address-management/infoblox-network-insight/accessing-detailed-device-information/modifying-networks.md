@@ -21,7 +21,7 @@ Grid Manager enables the user to edit select DHCP configurations, including the 
 
 *DHCP* *Forwarding* *confirmations*
 
-*[image: media]*
+![DHCP Forwarding confirmations](/assets/1455292598/961d3f1b-7368-4835-93b6-f5e93d4d3bb8.jpg)
 
 1. Click **Yes** to confirm the activating or deletion of DHCP forwarding on the selection, or **No** to reject the change.
 2. Click **Save** **&** **Close**.

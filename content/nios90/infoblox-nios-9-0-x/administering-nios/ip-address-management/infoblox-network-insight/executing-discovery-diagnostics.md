@@ -38,7 +38,7 @@ You can view the management state for any IP address, in any network, that is as
 1. From the **Data** **Management** tab, select the **Devices** tab. The Devices Home page displays a list of all devices currently found and catalogued by discovery.
 2. Click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280273280/a4ceb8af-fc04-4a6d-8a9a-0312cc0e9ff7.png)
    
    for a chosen device and choose **Networks** from the popup menu.
 3. Choose a network from the list. Grid Manager switches to the IPAM page view of the selected network.  

@@ -9,7 +9,7 @@ To map an E.164 to a URI, the E.164 number must first be transformed into a doma
 After the E.164 number is converted to a domain name, a DNS client can then perform a DNS lookup for the NAPTR records of the domain name. The following example illustrates how a DNS client processes NAPTR records.  
 In this example, the telephone number 1-555-123-4567 is converted to the domain name 7.6.5.4.3.2.1.5.5.5.1.e164.arpa. The DNS client then sends a query to the Infoblox DNS server for the NAPTR records associated with 7.6.5.4.3.2.1.5.5.5.1.e164.arpa. The Infoblox DNS server returns the following NAPTR record:
 
-*[image: media]*
+![Managing_NAPTR_Records.drawio.png](/assets/1422229727/789b03f4-d161-4dac-851b-26141446e649.png)
 
 
 

@@ -15,4 +15,4 @@ The ibTrap MIB comprises two trees, ibTrapOneModule and ibNotificationVarBind. T
 
 *ibTrapOne* *MIB* *Structure*
 
-*[image: media]*
+![ibTrapOne MIB Structure](/assets/1430094491/38ec7cf3-00be-4a58-a66a-a843563ef295.png)

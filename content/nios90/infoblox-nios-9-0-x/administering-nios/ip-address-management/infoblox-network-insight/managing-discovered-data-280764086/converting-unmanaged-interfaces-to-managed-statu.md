@@ -3,7 +3,7 @@ title: "Converting Unmanaged Interfaces to Managed Status"
 source: "/space/nios90/1432818350"
 pageId: "1432818350"
 ---
-*[image: media]*
+![image](/assets/1432818350/1649906f-59d0-46ca-b9fb-a281a9065076.png)
 
 > **warning**
 >

@@ -10,7 +10,7 @@ If you rename the admin user or delete the admin user, the API proxy server fail
 1. **Grid**: From the **Cloud** tab, click **Grid** **Cloud** **API** **Properties** from the Toolbar. Configuration done for the Grid only applies to the current Grid Master; it is not inherited by other Cloud Platform Appliances. ** **  
    **Member**: From the **Cloud** tab, select the **Members** tab -&gt; *member* checkbox, and then click the Action icon
    
-   *[image: media]*
+   *[image: image]*
    
    and select **Edit** from the menu. Configuration done at the member level applies only to the Grid member.
 2. In the *Grid* *Cloud* *API* *Properties* (for the current Grid Master) or the *Member* *Cloud* *API* *Properties* editor, select the **General** tab, and then complete the following:  

@@ -19,7 +19,7 @@ This diagram illustrates the step-by-step process of SAML-based Single Sign-On (
 
 *[drawio]*
 
-*[image: media]*
+![SAML SSO Authentication Flow Diagram](/assets/194446232/fcadf243-3be4-4e79-80ae-8adcf7f072e0.png)
 
 
 

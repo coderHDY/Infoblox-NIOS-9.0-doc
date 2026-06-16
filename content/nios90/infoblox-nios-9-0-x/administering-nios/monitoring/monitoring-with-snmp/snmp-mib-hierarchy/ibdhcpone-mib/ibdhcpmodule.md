@@ -14,7 +14,7 @@ The below figure illustrates the structure of the ibDHCPModule. (Note that the O
 
 *ibDHCPModule*
 
-*[image: media]*
+*[image: image]*
 
 ibDHCPSubnetTable provides statistical data about the DHCP operations of the appliance. It contains the following objects:
 

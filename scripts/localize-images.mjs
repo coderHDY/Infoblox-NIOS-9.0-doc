@@ -15,20 +15,18 @@ import {
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const BASE = "https://docs.infoblox.com";
 const manifest = JSON.parse(await fs.readFile(path.join(ROOT, "manifest.json"), "utf8"));
-const byId = new Map(manifest.pages.map((p) => [p.id, p]));
 
 const browser = await chromium.launch({ headless: true });
-const context = await browser.newContext();
-await context.addCookies([]); // session via goto
+const context = await browser.newContext({ acceptDownloads: true });
 const page = await context.newPage();
 await page.goto(`${BASE}/space/nios90`, { waitUntil: "domcontentloaded", timeout: 60_000 });
 await page.waitForTimeout(2000);
-const request = context.request;
 
 const rawDir = path.join(ROOT, "raw");
 const publicDir = path.join(ROOT, "public");
 let images = 0;
 let updated = 0;
+let processed = 0;
 
 for (const entry of manifest.pages) {
   const rawPath = path.join(rawDir, `${entry.id}.json`);
@@ -37,9 +35,11 @@ for (const entry of manifest.pages) {
     const attachments = body.attachments ?? [];
     if (!attachments.length) continue;
 
-    const assetMap = await downloadAttachments(request, attachments, entry.id, publicDir, BASE);
-    if (!Object.keys(assetMap).length) continue;
+    processed++;
+    const before = images;
+    const assetMap = await downloadAttachments(page, attachments, entry.id, publicDir, BASE);
     images += Object.keys(assetMap).length;
+    if (!Object.keys(assetMap).length) continue;
 
     const adfRaw = body.body?.atlas_doc_format?.value;
     if (!adfRaw) continue;
@@ -57,10 +57,11 @@ for (const entry of manifest.pages) {
       await fs.writeFile(mdPath, next);
       updated++;
     }
+    if (processed % 20 === 0) process.stdout.write(`\r  images … ${processed} pages, ${images} assets`);
   } catch {
     /* skip */
   }
 }
 
 await browser.close();
-console.log(`localize-images: ${images} assets, ${updated} markdown files updated`);
+console.log(`\nlocalize-images: ${images} assets on ${processed} pages, ${updated} md updated`);

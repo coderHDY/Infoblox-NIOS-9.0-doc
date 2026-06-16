@@ -16,4 +16,4 @@ You can also query ibMemberNodeServiceStatusTable and ibMemberPassiveNodeService
 
 *ibMemberServiceStatusTable* *Objects*
 
-*[image: media]*
+![ibMemberServiceStatusTable Objects](/assets/1430160289/ee3df62a-30b1-44d6-b090-ebcd6361f3e9.png)

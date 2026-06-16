@@ -29,4 +29,4 @@ The following table lists the NTP client server behaviour in different scenarios
 
 *NTP* *Client* *Administrator* *Obtaining* *Secret* *Key* *from* *NTP* *Server* *Administrator*
 
-*[image: media]*
+![image](/assets/1449001060/aae6fe34-1cf7-444e-9c2f-2e4a4cb127b2.png)

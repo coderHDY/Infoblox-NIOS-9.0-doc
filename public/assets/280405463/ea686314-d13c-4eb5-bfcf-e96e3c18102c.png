@@ -1,0 +1,61 @@
+<mxfile host="ac.draw.io" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.6">
+  <diagram id="cTwyWRzXl89h2DyLFQ6T" name="Page-1">
+    <mxGraphModel dx="-117" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-1" value="" style="endArrow=none;html=1;strokeColor=#666;strokeWidth=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1219" y="381" as="sourcePoint" />
+            <mxPoint x="1219" y="101" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-2" value="&lt;span&gt;Remove Zone B and …&lt;/span&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1144" y="28" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-3" value="&lt;span&gt;… reparent its subzones.&lt;/span&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1460" y="28" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-4" value="&lt;span&gt;… the admin access settings for subzone C change because the privileges for its new parent&lt;br&gt;zone (zone A) are different from those of its previous parent zone (zone B).&lt;br&gt;&lt;br&gt;Before you remove zone B, subzone C inherits a “Deny” admin access setting from zone B.&lt;br&gt;After the removal, subzone C inherits “Read/Write” access from its new parent zone, zone A.&lt;br&gt;&lt;br&gt;Note that if you set a specific “Deny” admin access privilege for subzone C before removing its&lt;br&gt;parent zone (zone B), subzone C retains its specified “Deny” setting.&lt;/span&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;" vertex="1" parent="1">
+          <mxGeometry x="1155" y="426" width="530" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-5" value="Zone A&lt;br&gt;Read/Write" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1154" y="78" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-6" value="Zone B&lt;div&gt;Deny&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1154" y="206" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-7" value="Subzone C&lt;div&gt;Inherits &quot;Deny&quot;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1154" y="336" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-8" value="Zone A&lt;br&gt;Read/Write" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1475" y="77.5" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-9" value="Zone B&lt;br&gt;Deny" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#392F3F);fillColor=light-dark(#CCCCCC,#392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;opacity=40;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1475" y="204.5" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-10" value="Subzone C&lt;br&gt;Inherits&lt;br&gt;&quot;Reat/Write&quot;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1473" y="334.5" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-11" value="" style="endArrow=none;html=1;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;opacity=50;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1470" y="271" as="sourcePoint" />
+            <mxPoint x="1610" y="201" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-12" value="" style="endArrow=none;html=1;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;opacity=50;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1470" y="201" as="sourcePoint" />
+            <mxPoint x="1610" y="271" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-13" value="" style="html=1;shadow=1;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.48;dx=43.21;notch=0;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="210" width="100" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="pCPi4XRwCNF6ACsBISmz-14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#636363,#959595);" vertex="1" parent="1">
+          <mxGeometry x="1110" y="10" width="580" height="550" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

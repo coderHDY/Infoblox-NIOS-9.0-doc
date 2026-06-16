@@ -14,7 +14,7 @@ The text listing for the Capabilities field may be too long to display in the In
 
 *Capabilities* *information* *for* *the* *selected* *interface*
 
-*[image: media]*
+![Capabilities information for the selected interface](/assets/1455292566/8f053e25-7193-482d-8813-5b9831f61c6b.jpg)
 
 
 

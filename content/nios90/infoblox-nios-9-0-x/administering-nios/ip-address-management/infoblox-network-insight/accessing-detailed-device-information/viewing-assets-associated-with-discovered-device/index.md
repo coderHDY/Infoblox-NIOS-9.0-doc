@@ -11,7 +11,7 @@ To view assets associated with discovered devices:
 1. From the **Data** **Management** tab, select the **Devices** tab. The Devices Home page displays a list of all devices currently found and catalogued by discovery.
 2. Click the Action icon
    
-   *[image: media]*
+   ![image](/assets/1455358065/5a7e2b7f-8e5f-4b28-880d-3616966b8e57.png)
    
    for a chosen device and choose **Interfaces** from the drop-down menu, or simply click the device name to display the Interfaces list. Click **Devices** **Home** to return to the main **Devices** page.
 3. Click the **Assets** tab. Grid Manager displays all assets associated with the chosen device.  

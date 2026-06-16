@@ -20,6 +20,6 @@ When OSPF session with a neighbor router in the OSPF Area reaches FULL state, BF
 
 *Enabling BFD for OSPF  *
 
-*[image: media]*
+![image](/assets/1412137245/f68dcabb-7dbe-48a1-9287-7cf33b3339c6.png)
 
 You can use the `show ipv6_ospf neighbor` CLI command to view runtime BFD information for OSPF.

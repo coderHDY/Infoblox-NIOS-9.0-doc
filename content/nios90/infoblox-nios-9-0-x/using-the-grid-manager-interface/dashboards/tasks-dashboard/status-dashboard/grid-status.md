@@ -35,15 +35,15 @@ In the upper section of the widget, Grid Manager displays the overall status of 
 
 | **Icon** | **Color** | **Meaning** |
 | --- | --- | --- |
-|   *[image: media]*   | Green | All Grid members are operating normally in a "Running" state. |
-|   *[image: media]*   | Yellow | At least one of the Grid members is connecting or synchronizing with its Grid Master. |
-|   *[image: media]*   | Red | At least one of the Grid members does not have a Grid license, is offline, upgrading, downgrading, or shutting down. |
+|   ![Status Dashboard_green_color_icon.png](/assets/1457095703/d616dc0d-f9ba-4fc6-b07d-9e2320b0d03c.png)   | Green | All Grid members are operating normally in a "Running" state. |
+|   ![Status Dashboard_yellow_color_icon.png](/assets/1457095703/93a39b94-0a59-43f7-b246-a30f7734e55c.png)   | Yellow | At least one of the Grid members is connecting or synchronizing with its Grid Master. |
+|   ![Status Dashboard_red_color_icon.png](/assets/1457095703/ce82674d-103f-4660-bf94-7c08e890a603.png)   | Red | At least one of the Grid members does not have a Grid license, is offline, upgrading, downgrading, or shutting down. |
 
 This section also displays the overall operational status of the DNS, DHCP, NTP, FTP, TFTP, HTTP (File Distribution), bloxTools, Captive Portal, Cloud Sync (Cloud DNS Sync in 9.0.x versions prior to 9.0.4), DNS Accelerator usage, and Reporting services that are currently running on the Grid. The status icon can be one of the following:
 
 | **Icon** | **Color** | **Meaning** |
 | --- | --- | --- |
-|   *[image: media]*   | Green | The enabled service is running properly on one or more Grid members. |
-|   *[image: media]*   | Yellow | At least one of the Grid members is having issues with the enabled service. |
-|     *[image: media]*   | Red | The enabled service is not running properly on at least one of the members. (A red status icon can also appear temporarily when the service is enabled and begins running, but the monitoring mechanism has not yet notified Grid Manager.) |
-|   *[image: media]*   | Gray | The service is not configured or is disabled on at least one Grid member. |
+|   ![Status Dashboard_green_color_icon.png](/assets/1457095703/d616dc0d-f9ba-4fc6-b07d-9e2320b0d03c.png)   | Green | The enabled service is running properly on one or more Grid members. |
+|   ![Status Dashboard_yellow_color_icon.png](/assets/1457095703/93a39b94-0a59-43f7-b246-a30f7734e55c.png)   | Yellow | At least one of the Grid members is having issues with the enabled service. |
+|     ![Status Dashboard_red_color_icon.png](/assets/1457095703/ce82674d-103f-4660-bf94-7c08e890a603.png)   | Red | The enabled service is not running properly on at least one of the members. (A red status icon can also appear temporarily when the service is enabled and begins running, but the monitoring mechanism has not yet notified Grid Manager.) |
+|   ![Status Dashboard_gray_color_icon.png](/assets/1457095703/b09547e6-6a73-4ef2-bdf5-c7f17bf9f5b9.png)   | Gray | The service is not configured or is disabled on at least one Grid member. |

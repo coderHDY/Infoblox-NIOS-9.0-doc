@@ -1,0 +1,58 @@
+<mxfile host="ac.draw.io" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.6">
+  <diagram id="QOVeb34RiBgTpNg9jmqz" name="Page-1">
+    <mxGraphModel dx="1689" dy="969" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IBU1q7tewPusX7dVgGqV-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#636363,#959595);" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="360" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-2" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;textShadow=1;shadow=1;strokeColor=light-dark(#729CFD,#EDEDED);" vertex="1" parent="1">
+          <mxGeometry x="34" y="161" width="330" height="229" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-3" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;entryX=0.182;entryY=0.831;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="IBU1q7tewPusX7dVgGqV-12" target="IBU1q7tewPusX7dVgGqV-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="369" y="56.07672104915298" as="sourcePoint" />
+            <mxPoint x="134" y="121" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-4" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#000000;strokeWidth=1;entryX=0.897;entryY=0.792;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="IBU1q7tewPusX7dVgGqV-13" target="IBU1q7tewPusX7dVgGqV-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="604" y="20" as="sourcePoint" />
+            <mxPoint x="244" y="121" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-5" value="" style="endArrow=classic;html=1;fontFamily=Helvetica;fontSize=12;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="124" y="284" as="sourcePoint" />
+            <mxPoint x="124" y="321" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-6" value="&lt;span style=&quot;font-family: helvetica; font-style: normal; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; display: inline; float: none; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font&gt;&lt;b&gt;NIOS&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" style="text;html=1;fontSize=12;align=center;fontColor=light-dark(#729CFD,#EDEDED);" vertex="1" parent="1">
+          <mxGeometry x="174" y="159" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-7" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;gradientColor=#DBF9FF;strokeColor=light-dark(#36e4f5, #ededed);shadow=1;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="104" y="20" width="165" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-8" value="Outbound Cloud Client" style="whiteSpace=wrap;html=1;direction=south;fillColor=light-dark(#FFFFFF,#392F3F);strokeColor=light-dark(#1db14c, #392F3F);rounded=1;gradientColor=light-dark(#CCFFCC,#EDEDED);shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="64" y="238.5" width="120" height="54.5" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-9" value="Infoblox Portal" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="136.5" y="70" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-10" value="Outbound" style="whiteSpace=wrap;html=1;direction=south;fillColor=light-dark(#FFFFFF,#392F3F);strokeColor=light-dark(#1db14c, #392F3F);rounded=1;gradientColor=light-dark(#CCFFCC,#EDEDED);shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="64" y="321" width="120" height="54.5" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-11" value="Threat Insight&lt;br&gt;Cloud Client" style="whiteSpace=wrap;html=1;direction=south;fillColor=light-dark(#FFFFFF,#392F3F);strokeColor=light-dark(#1db14c, #392F3F);rounded=1;gradientColor=light-dark(#CCFFCC,#EDEDED);shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="212.68" y="238.5" width="120" height="54.5" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-12" value="Cloud API Interface" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#7198fc, #ededed);fillColor=light-dark(#becff9, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="64.00000000000006" y="192" width="118.68" height="49.5" as="geometry" />
+        </mxCell>
+        <mxCell id="IBU1q7tewPusX7dVgGqV-13" value="Cloud API Interface" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#7198fc, #ededed);fillColor=light-dark(#becff9, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="214.00000000000006" y="192" width="118.68" height="49.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

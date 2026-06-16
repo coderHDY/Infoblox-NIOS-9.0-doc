@@ -8,7 +8,7 @@ This panel lists all discovered interfaces associated with the selected device. 
 1. From the **Data** **Management** tab, select the **Devices** tab. The Devices Home page displays a list of all devices currently found and catalogued by discovery.
 2. Click the **Action** icon
    
-   *[image: media]*
+   ![image](/assets/1455358014/17f2f99c-a115-4285-a14d-083e4f72ffbc.png)
    
    for a chosen device and choose **Interfaces** from the drop-down menu, or simply click the device name to display the Interfaces list. Click **Devices** **Home** to return to the main **Devices** page.  
    This panel displays the following information for each interface. Note that some data may appear for some device types and not for others.

@@ -34,7 +34,7 @@ The following figure illustrates how you can configure default and non-default n
 
 *Active Directory Authentication for Nested Groups*
 
-*[image: media]*
+![Active Directory Authentication for Nested Groups](/assets/1471251194/8539eb77-b746-4869-83c7-0b5806d7248a.jpg)
 
 To enable AD authentication for nested groups on the NIOS appliance:
 

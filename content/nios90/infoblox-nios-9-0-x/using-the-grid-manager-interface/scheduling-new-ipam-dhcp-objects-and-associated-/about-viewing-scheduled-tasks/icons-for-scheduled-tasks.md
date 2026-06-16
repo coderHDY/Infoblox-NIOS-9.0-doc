@@ -8,9 +8,9 @@ You can click the icon and Grid Manager displays the corresponding editor (for m
 
 *Icon* *for* *a* *Scheduled* *Task*
 
-*[image: media]*
+![Icon for a Scheduled Task](/assets/1454965051/6e5058e8-52cf-485d-bb30-cc8738d3776e.jpg)
 
 In the editor, Grid Manager displays the Schedule icon in green to indicate a pending scheduled task associated with the corresponding object, as shown in the Scheduling Icon Indicating a Pending Task figure. You can click the Schedule icon to view the date and time of the scheduled task. You can also reschedule the task if you have the applicable permissions. For information, see [Rescheduling Tasks](#).   
 *Scheduling* *Icon* *Indicating* *a* *Pending* *Task*
 
-*[image: media]*
+![Scheduling Icon Indicating a Pending Task](/assets/1454965051/186218e6-a3a8-4a26-ba84-4765d69357bf.jpg)

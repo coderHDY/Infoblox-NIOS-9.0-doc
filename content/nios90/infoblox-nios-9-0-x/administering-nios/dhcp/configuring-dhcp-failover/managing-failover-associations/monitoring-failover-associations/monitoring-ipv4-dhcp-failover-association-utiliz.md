@@ -28,11 +28,11 @@ To prevent overutilization, NIOS sets the maximum failover association capacity 
 
 *Log snippet of clear SNMP trap *
 
-*[image: media]*
+![Image (11).jpeg](/assets/1857683522/941ef7c6-6b0c-495c-b372-6f6f37931775.jpeg)
 
 *Log snippet of alert clearance from syslog *
 
-*[image: media]*
+![image (3).png](/assets/1857683522/8e5de1d1-f460-4c60-a109-316de82d6711.png)
 
 
 
@@ -71,14 +71,14 @@ Assume that you have a TE-1425 Grid member that supports a maximum of 100,000 IP
 
 * Example of warning alert in Grid Manager*
 
-*[image: media]*
+![image](/assets/1857683522/8169f8ca-e338-484e-831a-c5a0330d96d7.png)
 
 - The `dhcpMemberCapacityExceeded` SNMP trap is generated. It includes the following variables:  
   `{hostname, model, supported_max, allocated, percent_used, threshold, severity, first_seen}`
 - An email is sent to configured recipients.
 - The event is recorded in the audit log, Infoblox log, and syslog with a timestamp of when the event was first seen.
 
-*[image: media]*
+![image](/assets/1857683522/b3ee1b05-e869-4b7b-a2f4-f6c87808292e.png)
 
 ## Scenario: No duplicate spam while still over threshold
 

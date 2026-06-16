@@ -45,7 +45,7 @@ To edit an Active Directory Site:
 1. From the **Infoblox Grid** tab, select the **Microsoft** **Servers** tab -&gt; **Active** **Directory** **Domains** tab and click respective Active Directory Domain name.
 2. In the **Active** **Directory** **Domains** **Home** table, select an Active Directory Site name and click the Edit icon, or click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280403295/558d2c36-f0f0-497d-922b-489719dd6859.png)
    
    next to the respective Active Directory Site name and select **Edit** from the menu.
 3. In the *Active* *Directory* *Site* *Properties* editor, you can do the following:

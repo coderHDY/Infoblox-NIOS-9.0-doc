@@ -32,7 +32,38 @@ function extFromAttachment(att) {
   return IMAGE_EXT.has(ext) ? ext : ".png";
 }
 
-export async function downloadAttachments(request, attachments, pageId, publicRoot, base = "https://docs.infoblox.com") {
+async function fileExists(p) {
+  try {
+    await fs.access(p);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function downloadViaBrowser(page, absoluteUrl, dest) {
+  if (await fileExists(dest)) return true;
+  try {
+    const [download] = await Promise.all([
+      page.waitForEvent("download", { timeout: 120_000 }),
+      page.evaluate((u) => {
+        const a = document.createElement("a");
+        a.href = u;
+        a.download = "";
+        a.rel = "noopener";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }, absoluteUrl),
+    ]);
+    await download.saveAs(dest);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export async function downloadAttachments(page, attachments, pageId, publicRoot, base = "https://docs.infoblox.com") {
   const assetMap = {};
   const dir = path.join(publicRoot, "assets", pageId);
   await fs.mkdir(dir, { recursive: true });
@@ -47,32 +78,16 @@ export async function downloadAttachments(request, attachments, pageId, publicRo
     const dest = path.join(dir, fileName);
     const webPath = `/assets/${pageId}/${fileName}`;
 
-    try {
-      if (!(await fileExists(dest))) {
-        const resp = await request.get(link);
-        if (!resp.ok()) continue;
-        await fs.writeFile(dest, await resp.body());
-      }
-      if (att.fileId) assetMap[att.fileId] = webPath;
-      assetMap[link] = webPath;
-      if (att.downloadLink) assetMap[att.downloadLink] = webPath;
-    } catch {
-      /* skip failed image */
-    }
+    const ok = await downloadViaBrowser(page, link, dest);
+    if (!ok) continue;
+
+    if (att.fileId) assetMap[att.fileId] = webPath;
+    assetMap[link] = webPath;
+    if (att.downloadLink) assetMap[att.downloadLink] = webPath;
   }
   return assetMap;
 }
 
-async function fileExists(p) {
-  try {
-    await fs.access(p);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-/** Map ADF media node id → local public URL using attachment index. */
 export function resolveMediaAssetMap(adfValue, attachmentIdx, downloaded) {
   const map = { ...downloaded };
   const walk = (node) => {
@@ -80,9 +95,8 @@ export function resolveMediaAssetMap(adfValue, attachmentIdx, downloaded) {
     if (node.type === "media") {
       const id = node.attrs?.id;
       const att = id ? attachmentIdx.byFileId.get(id) : null;
-      if (att?.downloadLink && map[att.downloadLink]) {
-        map[id] = map[att.downloadLink];
-      }
+      const web = (id && map[id]) || (att?.fileId && map[att.fileId]);
+      if (web) map[id] = web;
     }
     for (const c of node.content ?? []) walk(c);
   };

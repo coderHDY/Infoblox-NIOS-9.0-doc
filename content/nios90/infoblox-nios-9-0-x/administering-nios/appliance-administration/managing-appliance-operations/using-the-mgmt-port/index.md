@@ -24,14 +24,14 @@ Some NIOS appliance deployment scenarios support more than one concurrent use of
 
 | **Appliance** **Configuration** | **Appliance** **Management** | **Grid** **Communications** | **DNS** ** Services** |
 | --- | --- | --- | --- |
-| Single Independent Appliance | *[image: media]* | Not Applicable | *[image: media]* |
-| Independent HA Pair | *[image: media]* | Not Applicable | *[image: media]* |
-| Grid Master | *[image: media]* | (for external Grid communication) | *[image: media]* |
-| Grid Master Candidate | *[image: media]* | (for external Grid communication) | *[image: media]* |
-| HA Grid Member | *[image: media]* | *[image: media]* | *[image: media]* |
-| Single Grid Member | *[image: media]* | *[image: media]* | *[image: media]* |
-| HA Grid Master | Not Recommended | (for external Grid communication) | *[image: media]* |
-| HA Grid Master Candidate | Not Recommended | (for external Grid communication) | *[image: media]* |
+| Single Independent Appliance | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) | Not Applicable | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) |
+| Independent HA Pair | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) | Not Applicable | ![image](/assets/660144129/ff1901a3-11cd-46b8-8631-b21b48138e21.png) |
+| Grid Master | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) | (for external Grid communication) | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) |
+| Grid Master Candidate | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) | (for external Grid communication) | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) |
+| HA Grid Member | ![image](/assets/660144129/4a4aa6de-90e5-4978-be97-5260896c50fc.png) | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) | ![image](/assets/660144129/ff1901a3-11cd-46b8-8631-b21b48138e21.png) |
+| Single Grid Member | ![image](/assets/660144129/4a4aa6de-90e5-4978-be97-5260896c50fc.png) | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) |
+| HA Grid Master | Not Recommended | (for external Grid communication) | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) |
+| HA Grid Master Candidate | Not Recommended | (for external Grid communication) | ![image](/assets/660144129/d1ec36c2-368d-40d4-a0bb-b210b84b50f9.png) |
 
 `
 

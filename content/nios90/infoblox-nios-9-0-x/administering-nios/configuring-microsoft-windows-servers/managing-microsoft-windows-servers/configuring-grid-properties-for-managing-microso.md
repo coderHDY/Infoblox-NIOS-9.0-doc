@@ -78,7 +78,7 @@ To configure Grid properties for managing Microsoft servers, complete the follow
 1. **Grid**: From the **Infoblox** **Grid** tab -&gt;** Grid** **Manager** tab, expand the Toolbar and click **Grid** **Properties** -&gt; **Edit**. Select **Microsoft** **Integration** tab in the *Infoblox* *Grid* *Properties* *Editor* wizard.  
    **Microsoft** **Server:** From the **Grid** tab -&gt; **Microsoft** **Servers** tab -&gt; **Servers** tab, select a Microsoft server and click the **Edit** icon, or click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280662859/5016bf15-f2e3-4844-adef-0a4b9a7d9d29.png)
    
    next to the respective Microsoft server and select **Edit** from the menu. In the Microsoft server editor, click the **General** tab.  
    **Standalone** **appliance**: From the **System** tab -&gt; **System** **Manager** tab, expand the Toolbar and click **System** **Properties** -&gt; **Edit**.

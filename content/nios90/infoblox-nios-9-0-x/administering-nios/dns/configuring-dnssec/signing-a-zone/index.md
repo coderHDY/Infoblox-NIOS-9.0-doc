@@ -41,4 +41,4 @@ When you sign multiple zones, the appliance displays generic error messages for 
 
 To remove a zone from the list, select the checkbox adjacent to the respective zone and click the Delete icon. To view the records of the signed zone, from the **Data** **Management** tab, select the **DNS** tab -&gt; **Zones** tab -&gt; *zone*. Expand the Records section to list the RRs of the zone, as shown in the below figure.
 
-*[image: media]*
+![image](/assets/332562696/1370c817-e05a-42a8-bc09-48d5d5904651.png)

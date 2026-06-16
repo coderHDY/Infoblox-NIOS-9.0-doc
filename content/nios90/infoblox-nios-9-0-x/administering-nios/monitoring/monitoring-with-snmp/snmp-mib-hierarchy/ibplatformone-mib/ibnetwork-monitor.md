@@ -22,7 +22,7 @@ As shown in the following ibNetWorkMonitorObjects figure, the ibNetwork Monito
 
 *ibNetWorkMonitorObjects*
 
-*[image: media]*
+*[image: image]*
 
 *ibNetworkMonitorDNSNonAAandibNetworkMonitorDNSAASubtrees*
 

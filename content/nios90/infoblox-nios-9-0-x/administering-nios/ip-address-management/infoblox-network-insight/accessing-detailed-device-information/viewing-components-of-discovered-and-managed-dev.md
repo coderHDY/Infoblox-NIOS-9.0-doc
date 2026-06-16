@@ -17,6 +17,6 @@ Network Insight provides a table of hardware components for each discovered/mana
 > 
 > - Note To view information about the device, including its IPAM Type and the operating status of its ports, click the **Action** icon
 >   
->   *[image: media]*
+>   ![image](/assets/1455325309/d2240c24-b620-4f8c-8383-ff13b3015310.png)
 >   
 >   for a chosen device and choose **Device Details** in the drop-down menu.

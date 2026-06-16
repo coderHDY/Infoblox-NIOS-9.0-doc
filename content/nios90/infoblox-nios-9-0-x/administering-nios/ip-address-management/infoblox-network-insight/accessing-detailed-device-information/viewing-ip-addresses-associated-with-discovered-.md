@@ -22,7 +22,7 @@ You can view the complete list of discovered IP addresses bound to all interface
    - **VRF** **RD**: The route distinguisher associated with the VRF instance, if applicable.
    - **Interface** **Name**: The name of the interface (usually a switched interface) associated with the discovered device.
    - **MAC** **Address**: The hardware MAC address associated with the interface.
-   - *[image: media]*
+   - ![MAC Address](/assets/1455325269/c9aa0c23-b586-433c-acaf-97cc3362729e.png)
      
      **VLAN** **Name/VLAN** **ID**: The data VLAN name and VLAN identifier to which the interface is bound, if applicable. In most cases, you see both the VLAN name and the VLAN ID as two values in the same field. Multiple VLAN entries may be present for an interface or IP Address.Some interfaces may have a large number of associated VLANs. By default, Network Insight does not automatically show all of them, instead providing a **Show** **all...** link for reference within the table cell. All VLAN ID/VLAN name values appear within the table cell, with a **Hide...** link provided to shorted the list back to original length.
    - **AdminStatus**: Lists whether the interface is administratively Up or administratively Down.

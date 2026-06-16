@@ -22,4 +22,4 @@ Rescheduling object change tasks and associated port control tasks is a special 
 
 *Rescheduling* *an* *object* *change* *task* *and* *a* *port* *control* *task*
 
-*[image: media]*
+![Rescheduling an object change task and a port control task](/assets/1454965089/5cd4add6-0be5-46ce-9448-8613e74ec53f.png)

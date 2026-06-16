@@ -33,7 +33,7 @@ By default, networks inherit their blackout settings from the Grid level. You ca
    2. **Data ** **Management** **–&gt;** **DHCP** **–&gt;** **Networks**
 2. Click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280763850/6aad19e6-e35c-4176-b204-9d60be8de0e4.png)
    
    for a chosen network and choose **Edit** from the popup menu.
    
@@ -43,4 +43,4 @@ By default, networks inherit their blackout settings from the Grid level. You ca
      
    *The* *Discovery* *Blackout* *tab* *with* *enabled* *Port* *Configuration* *Blackouts*
 
-*[image: media]*
+![image](/assets/280763850/4a0df784-80cb-4e08-949e-1d1bf2250e2c.jpg)

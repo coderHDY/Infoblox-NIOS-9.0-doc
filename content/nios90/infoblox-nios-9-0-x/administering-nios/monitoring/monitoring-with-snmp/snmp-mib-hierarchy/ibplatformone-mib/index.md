@@ -28,4 +28,4 @@ The ibPlatformOne MIB also contains the following tables that provide status of 
 
 *ibPlatformOne* *MIB* *Structure*
 
-*[image: media]*
+*[image: image]*

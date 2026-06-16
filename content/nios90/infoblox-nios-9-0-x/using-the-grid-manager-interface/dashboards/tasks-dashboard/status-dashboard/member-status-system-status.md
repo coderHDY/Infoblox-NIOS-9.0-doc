@@ -34,10 +34,10 @@ The widget also displays the service status of the following: FTP, TFTP, HTTP (F
 
 | **Icon** | **Color** | **Meaning** |
 | --- | --- | --- |
-|   *[image: media]*   | Green | The service is enabled and running properly. |
-|   *[image: media]*   | Yellow | The service is enabled, but there may be some issues that require attention. |
-|   *[image: media]*   | Red | The service is enabled, but it is not running properly or is out of synchronization. (A red status icon can also appear temporarily when a service is enabled and begins running, but the monitoring mechanism has not yet notified the GUI engine.) |
-|   *[image: media]*   | Gray | The service is not configured or is disabled. |
+|   ![Status Dashboard_green_color_icon.png](/assets/1457193829/62148256-4d0d-4491-b238-3987ee1221d9.png)   | Green | The service is enabled and running properly. |
+|   ![Status Dashboard_yellow_color_icon.png](/assets/1457193829/400c857b-f11f-405f-a3fe-f6b6de3a81f0.png)   | Yellow | The service is enabled, but there may be some issues that require attention. |
+|   ![Status Dashboard_red_color_icon.png](/assets/1457193829/4bbd7d5c-dec1-4229-ae58-51f5c51eb745.png)   | Red | The service is enabled, but it is not running properly or is out of synchronization. (A red status icon can also appear temporarily when a service is enabled and begins running, but the monitoring mechanism has not yet notified the GUI engine.) |
+|   ![Status Dashboard_gray_color_icon.png](/assets/1457193829/13a0ad0f-f333-4c6c-b3bf-16ccf5f196f9.png)   | Gray | The service is not configured or is disabled. |
 
 
 

@@ -21,9 +21,16 @@ export function rewriteLinks(markdown, manifest) {
     out = out.replace(re, (match, id) => routeForId(manifest, id) ?? match);
   }
 
-  // Confluence markdown links: [text](https://...pages/123) already handled above in URL
+  // Markdown links [text](url)
+  out = out.replace(
+    /\]\((https?:\/\/infoblox-docs\.atlassian\.net\/wiki\/spaces\/nios90\/pages\/(\d+)[^)]*)\)/gi,
+    (_, _url, id) => {
+      const route = routeForId(manifest, id);
+      return route ? `](${route})` : `](${_url})`;
+    }
+  );
 
-  // Malformed relative links copied from Confluence (./nios90/... or ./administering-nios/...)
+  // Malformed relative links
   out = out.replace(/\]\(\.\/(?:nios90|administering-nios)\/([^)]+)\)/g, (_, rest) => {
     const normalized = rest.replace(/\.md$/, "").replace(/\/index$/, "");
     // try exact route match

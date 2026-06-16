@@ -1,0 +1,109 @@
+<mxfile host="ac.draw.io" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.6">
+  <diagram id="wvT9k7FLfaWWL4pYPSl1" name="Page-1">
+    <mxGraphModel dx="-117" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#636363,#959595);" vertex="1" parent="1">
+          <mxGeometry x="1110" y="10" width="810" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-2" value="" style="endArrow=none;html=1;strokeColor=#666;strokeWidth=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1204" y="383" as="sourcePoint" />
+            <mxPoint x="1204" y="103" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-3" value="&lt;span&gt;Remove Zone B and …&lt;/span&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1130" y="30" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-4" value="&lt;span&gt;… remove its subzones.&lt;/span&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1410" y="30" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-5" value="" style="html=1;shadow=1;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.48;dx=43.21;notch=0;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="211" width="100" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-6" value="" style="endArrow=none;html=1;strokeWidth=2;strokeColor=#666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1635" y="78" as="sourcePoint" />
+            <mxPoint x="1635" y="508" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-7" value="&lt;span&gt;The NIOS appliance removes zone B,&lt;br&gt;subzone C, and all their resource records.&lt;/span&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="429" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-8" value="&lt;span&gt;The NIOS appliance removes zone B and&lt;br&gt;its resource records. It reparents subzone&lt;br&gt;C to zone A. It creates a new NS record in&lt;br&gt;zone A for subzone C and possibly&lt;br&gt;changes admin privileges for subzone C.&lt;/span&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;" vertex="1" parent="1">
+          <mxGeometry x="1670" y="429" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-9" value="or" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1621" y="30" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-10" value="&lt;span&gt;… reparent its subzones.&lt;/span&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1690" y="30" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-11" value="Zone A" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="80" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-12" value="Zone B" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="208" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-13" value="Subzone C" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="338" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-14" value="Zone A" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1422" y="80" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-15" value="Zone A" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1707" y="80" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-16" value="Zone B" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#392F3F);fillColor=light-dark(#CCCCCC,#392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;opacity=40;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1707" y="207" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-17" value="Subzone C" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#36E4ED,#392F3F);fillColor=light-dark(#daf8ff, #392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1705" y="337" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-18" value="" style="endArrow=none;html=1;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;opacity=50;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1700" y="273" as="sourcePoint" />
+            <mxPoint x="1840" y="203" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-19" value="" style="endArrow=none;html=1;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;opacity=50;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1700" y="203" as="sourcePoint" />
+            <mxPoint x="1840" y="273" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-20" value="Zone B" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#392F3F);fillColor=light-dark(#CCCCCC,#392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;opacity=40;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1422" y="207" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-21" value="" style="endArrow=none;html=1;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;opacity=50;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1415" y="273" as="sourcePoint" />
+            <mxPoint x="1555" y="203" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-22" value="" style="endArrow=none;html=1;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;opacity=50;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1415" y="203" as="sourcePoint" />
+            <mxPoint x="1555" y="273" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-23" value="Subzone C" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#392F3F);fillColor=light-dark(#CCCCCC,#392F3F);shadow=1;glass=0;gradientColor=light-dark(#ffffff, #ededed);gradientDirection=east;strokeWidth=1;opacity=40;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1422" y="337" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-24" value="" style="endArrow=none;html=1;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;opacity=50;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1415" y="403" as="sourcePoint" />
+            <mxPoint x="1555" y="333" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gFRr6E1wl52cWDbFEIfl-25" value="" style="endArrow=none;html=1;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;opacity=50;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1415" y="333" as="sourcePoint" />
+            <mxPoint x="1555" y="403" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

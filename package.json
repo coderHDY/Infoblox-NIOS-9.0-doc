@@ -8,6 +8,7 @@
     "crawl:retry": "node scripts/crawl.mjs --retry-missing && node scripts/write-stubs.mjs",
     "fix-links": "node scripts/fix-links.mjs",
     "localize-images": "node scripts/localize-images.mjs",
+    "refresh-md": "node scripts/refresh-md.mjs",
     "sanitize": "node scripts/sanitize-md.mjs",
     "dev": "vitepress dev",
     "build": "node scripts/prebuild.mjs && vitepress build",

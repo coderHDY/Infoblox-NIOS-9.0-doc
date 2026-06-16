@@ -13,6 +13,6 @@ In the *Download License Keys* dialog that opens, complete the following steps:
 1. Select between **TXT** or **CSV** format.
 2. Click **Download**.
    
-   *[image: media]*
+   ![image-20240604-105506.png](/assets/1494843818/5d4e0781-0ca2-4058-ad78-87bf271cdd9a.png)
 3. In the *Save as* dialog, choose the location where you want to save the file.
 4. Click **Save**.

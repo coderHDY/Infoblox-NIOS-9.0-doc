@@ -26,7 +26,7 @@ To obtain permanent static licenses from Infoblox:
    4. In the *Software available to be assigned to Host* section, enter the quantity to be assigned in the **Qty to Assign** field of the applicable license.
    5. Click **Assign Software** to assign the licenses.
       
-      *[image: media]*
+      ![image](/assets/1495269964/ae302d9c-6612-4e9f-9773-9ed11fab3b5e.png)
    6. Click the **Download License Keys** button to download the licenses.
 5. To obtain the license for a new physical appliance:
    

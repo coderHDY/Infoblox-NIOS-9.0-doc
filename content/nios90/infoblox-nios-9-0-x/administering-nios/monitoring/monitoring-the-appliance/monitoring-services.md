@@ -11,10 +11,10 @@ After you enable any of the services — DHCP, DNS, TFTP, HTTP (for file distrib
 
 | **Icon** | **Color** | **Meaning** |
 | --- | --- | --- |
-| *[image: media]* | Green | The service is enabled and running properly. |
-| *[image: media]* | Yellow | The service is enabled, but there may be some issues that require attention. For DNS Infrastructure Protection, this could mean that one of the members is in monitor mode. |
-| *[image: media]* | Red | The service is enabled, but it is not running properly. (A red status icon can also appear temporarily when a service is enabled and begins running, but the monitoring mechanism has not yet notified Grid Manager.) |
-| *[image: media]* | Gray | The service is not configured or it is disabled. |
+| ![image](/assets/280662651/78a84469-c53f-468f-89c3-90c785847e73.png) | Green | The service is enabled and running properly. |
+| ![image](/assets/280662651/6572d908-2467-46db-baa6-eeea9afd8288.png) | Yellow | The service is enabled, but there may be some issues that require attention. For DNS Infrastructure Protection, this could mean that one of the members is in monitor mode. |
+| ![image](/assets/280662651/95a8bcae-1e13-41b0-8e2b-892cf36883be.png) | Red | The service is enabled, but it is not running properly. (A red status icon can also appear temporarily when a service is enabled and begins running, but the monitoring mechanism has not yet notified Grid Manager.) |
+| ![image](/assets/280662651/bf9fc6d8-1e0e-471a-bbb2-2097d30e4da3.png) | Gray | The service is not configured or it is disabled. |
 
 > **warning**
 >

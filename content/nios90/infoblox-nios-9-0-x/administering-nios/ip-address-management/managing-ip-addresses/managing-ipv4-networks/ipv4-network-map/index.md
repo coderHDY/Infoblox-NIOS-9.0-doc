@@ -15,4 +15,4 @@ The below figure displays the network map of a 20.0.0.0/8 network, which is a ne
 
 *20.0.0.0/8* *Network* *Map*
 
-*[image: media]*
+![image](/assets/1345030615/d79cbe3a-5c96-4502-bcdb-c072428e351f.jpg)

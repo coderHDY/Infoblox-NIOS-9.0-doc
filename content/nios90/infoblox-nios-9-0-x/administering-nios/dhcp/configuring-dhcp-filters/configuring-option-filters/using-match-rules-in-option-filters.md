@@ -16,7 +16,7 @@ Match value = `MSFT`
 
 The appliance generates the following rules in the dhcpd configuration file:
 
-*[image: media]*
+![Match Rules.drawio.png](/assets/1394540947/984a21b0-9512-420b-97c3-9f28c690a8a5.png)
 
 
 

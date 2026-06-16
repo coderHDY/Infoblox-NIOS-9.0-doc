@@ -56,6 +56,6 @@ checkbox, and then click the Detailed Status icon in the table toolbar of the *M
 
 | **Icon** | **Color** | **Meaning** |
 | --- | --- | --- |
-| *[image: media]* | Green | The NTP service is running properly. |
-| *[image: media]* | Yellow | The appliance is synchronizing its time. |
-| *[image: media]* | Red | The NTP service is not running properly. View the corresponding description for additional information. |
+| ![image](/assets/280765142/57590c4d-bc0b-41b8-9649-dec8e966f250.png) | Green | The NTP service is running properly. |
+| ![image](/assets/280765142/1cb5d403-5737-4357-8281-c3c8a600953f.png) | Yellow | The appliance is synchronizing its time. |
+| ![image](/assets/280765142/46662207-3ea2-4bdf-81f6-61785b7b0d02.png) | Red | The NTP service is not running properly. View the corresponding description for additional information. |

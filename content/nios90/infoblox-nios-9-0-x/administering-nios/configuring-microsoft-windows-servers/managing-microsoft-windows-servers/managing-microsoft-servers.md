@@ -22,7 +22,7 @@ To set the properties of a Microsoft server:
 
 1. From the **Infoblox Grid** tab, select the **Microsoft** **Servers** tab -&gt; **Servers** tab, select a Microsoft server and click the Edit icon, or click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280403352/443b7fb4-9d16-4123-be95-82527b7b2b77.png)
    
    next to the respective Microsoft server and select **Edit** from the menu.
 2. In the *Microsoft* *Server* *Properties* editor, you can set properties in the following tabs:

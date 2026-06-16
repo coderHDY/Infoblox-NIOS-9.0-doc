@@ -50,7 +50,7 @@ To modify an outbound template:
    or  
    From the **Grid** tab, select the **Ecosystem** tab, select the template that you want to modify, click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280269564/e89be9b6-7bf5-4156-affa-fd6f11ceccd4.png)
    
    and select **Edit**.  
    **System**: From the **System** tab, select the **Ecosystem** tab -&gt; **Templates** tab -&gt; *template* checkbox, and then click the Edit icon.  
@@ -82,7 +82,7 @@ You can do the following in this tab:
 
 - You can select the Action icon
   
-  *[image: media]*
+  ![image](/assets/280269564/e89be9b6-7bf5-4156-affa-fd6f11ceccd4.png)
   
   and do the following:
   

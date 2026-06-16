@@ -15,14 +15,14 @@ When you define a new network under IPAM or DHCP, you can click **Schedule** **f
 
 *Create* *Network* *Schedule* *page* *(After* *clicking* *Schedule* *for* *Later)*
 
-*[image: media]*
+![Create Network Schedule page (After clicking Schedule for Later) ](/assets/1455030658/99fb13e3-5fb5-421f-bf12-dbae052cb2a2.png)
 
 In cases of this type, you schedule or execute only a single task: creating the new network under DHCP/IPAM. No network provisioning task takes place.  
 When you provision the network without clicking **Schedule** **for** **Later**, the wizard provides a final Scheduling page with an expanded set of two task schedules as shown in the below figure:
 
 *Scheduling* *Add* *Network* *and* *Network* *Provisioning* *Tasks*
 
-*[image: media]*
+![Scheduling Add Network and Network Provisioning Tasks](/assets/1455030658/619fe584-e92f-431c-8df1-642fb3b60e3d.png)
 
 1. To immediately create the new network, you can select **Now**.
 2. You can choose to have Grid Manager create the network at a later time. To do so, select **Later**. Choose a **Selected time** by entering or selecting a **Start Date** (click the calendar icon to choose a calendar date) and a **Start Time** (click the clock icon to choose a specific time in fifteen minute increments), and choose a **Time Zone**.

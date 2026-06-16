@@ -42,6 +42,6 @@ To set up PDF delivery for the dashboard with a single panel:
 
 *Edit* *PDF* *Schedule* *dialog* *box*
 
-*[image: media]*
+*[image: image]*
 
 Click **Send** **Test** **Mail** to receive Dashboard PDFs Immediately.

@@ -26,4 +26,4 @@ In a Grid, you can configure the Grid Master and Grid members to synchronize the
 
 *Grid* *Master* *as* *NTP* *Client*
 
-*[image: media]*
+![image](/assets/1449394329/83e45302-c2b3-4fb3-9675-92ec417fa875.png)

@@ -15,17 +15,17 @@ Editing interfaces is done from the main **Data** **Management** **–&gt;** **D
 1. From the **Data** **Management** tab, select the **Devices** tab.
 2. Click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280666028/7e366b80-854f-43a6-a84b-2faa8968819e.png)
    
    for a chosen device and choose **Interfaces** from the popup menu.
 3. Select the checkbox for a specific interface, click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280666028/7e366b80-854f-43a6-a84b-2faa8968819e.png)
    
    for the interface and choose **Edit**. The interface editor appears as shown in the figure below.   
    *Interface* *Editor,* *with* *editable* *Admin* *Status* *and* *Description* *settings*
 
-*[image: media]*
+![image](/assets/280666028/d998e362-f250-4397-80b8-e447dc09d04f.jpg)
 
 4. The editable settings are **Admin** **Status** (**Up** or **Down**) and **Description** (click inside the field to edit). In some cases, owing to device permissions, the device type or other device settings, you may not be able to edit these values for the selected interface.  
      5. To edit VLANs for the chosen interface, click the **VLAN** tab. The following figure shows an example. VLAN editing also is subject to permission limitations based on the device, and on the device type.
@@ -43,7 +43,7 @@ To edit multiple interfaces for a device:
 1. From the **Data** **Management** tab, select the **Devices** tab.
 2. Click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280666028/7e366b80-854f-43a6-a84b-2faa8968819e.png)
    
    for a chosen device and choose **Interfaces** from the popup menu.
 3. Select the checkboxes for each interface that you want to edit.
@@ -80,7 +80,7 @@ The **Data** **Management** **–&gt;** **Devices** page allows you to immediate
 
 1. Click the Action icon
    
-   *[image: media]*
+   ![image](/assets/280666028/7e366b80-854f-43a6-a84b-2faa8968819e.png)
    
    for a chosen device and choose **Edit** from the popup menu. The **Interfaces** page appears for the device editor.
 2. Select the checkboxes for one or more ports and define the Port Configuration settings for the following:
@@ -106,7 +106,7 @@ Double-clicking a table row opens the editable fields for the selected record.
 If editable fields are not present in the table display, you cannot change their values in the **Interfaces** page.  
 After making inline changes, click **Save** on the selected row to commit them. To prevent using any changes, click **Cancel**. This also de-selects the row.
 
-*[image: media]*
+![image](/assets/280666028/0e173d02-7da1-436b-9490-c8337430176c.png)
 
 > **warning**
 >
@@ -114,4 +114,4 @@ After making inline changes, click **Save** on the selected row to commit them. 
 > 
 > When you make inline changes to an interface, a new task is created under Grid Manager, which you can view in the Task Manager page (for more information, see [*Viewing Tasks*](/nios90/infoblox-nios-9-0-x/using-the-grid-manager-interface/scheduling-tasks/viewing-tasks)). A status icon appears next to the interface element you have changed, indicating the status of the new task and providing a link to the Task Manager page. New tasks appear with a status icon of Pending (||). When the new task completes, the icon changes to a green checkmark.
 
-*[image: media]*
+![image](/assets/280666028/f54c3474-d426-46bd-be98-af19a1393e38.png)

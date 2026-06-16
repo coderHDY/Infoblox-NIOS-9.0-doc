@@ -11,7 +11,7 @@ The IP address **List** panel provides an Action icon  with a series of men
 
 *Virtual* *IPs* *and* *discovered* *redundancy* *information*
 
-*[image: media]*
+*[image: image]*
 
 
 

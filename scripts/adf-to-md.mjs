@@ -167,7 +167,7 @@ function findMedia(node) {
   }
   for (const child of node.content ?? []) {
     const found = findMedia(child);
-    if (found?.url) return found;
+    if (found?.url || found?.id) return found;
   }
   return null;
 }
