@@ -19,13 +19,21 @@ function buildSidebar() {
     if (p.parentId && byId.has(p.parentId)) byId.get(p.parentId).children.push(p);
   }
 
-  const toItem = (node) => {
-    const link =
+  /** index.md 经 VitePress normalize 后会带尾部 /，sidebar link 须一致才能 isActive */
+  const toLink = (localPath) => {
+    const isIndex = /\/index\.md$/.test(localPath);
+    let link =
       "/" +
-      node.localPath
+      localPath
         .replace(/^content\//, "")
         .replace(/\/index\.md$/, "")
         .replace(/\.md$/, "");
+    if (isIndex) link += "/";
+    return link;
+  };
+
+  const toItem = (node) => {
+    const link = toLink(node.localPath);
     if (node.children.length) {
       return {
         text: node.title,
@@ -39,7 +47,20 @@ function buildSidebar() {
     return { text: node.title, link };
   };
 
-  return [toItem(root)];
+  return [
+    {
+      text: "学习指南",
+      collapsed: false,
+      items: [
+        { text: "学习路线总览", link: "/learn/" },
+        {
+          text: "Administering NIOS Quick Study",
+          link: "/learn/administering-nios/",
+        },
+      ],
+    },
+    toItem(root),
+  ];
 }
 
 /** Rollup 默认用完整页面路径作文件名，超长路径会在 macOS/Linux 上触发 ENAMETOOLONG */
@@ -83,7 +104,10 @@ export default {
     ],
   },
   themeConfig: {
-    nav: [{ text: "NIOS 9.0", link: "/nios90/infoblox-nios-9-0-x/" }],
+    nav: [
+      { text: "学习指南", link: "/learn/" },
+      { text: "NIOS 9.0", link: "/nios90/infoblox-nios-9-0-x/" },
+    ],
     sidebar: buildSidebar(),
     search: { provider: "local" },
   },
